@@ -1,52 +1,442 @@
 .container {
+  font-family: 'IBM Plex Mono';
+  color: #000000;
+  .uploadToEarn {
     padding: 0 0 183px 0;
-    .uploadToEarn {
-        color: #000000;
-        .title {
-            text-align: center;
-            font-family: 'IBM Plex Mono';
-            font-weight: 700;
-            font-size: 9.86111111111vw;
-            line-height: 120%;
-            text-transform: uppercase;
-        }
-        .subtitle {
-            margin: 0 0 62px 0;
-            font-family: 'IBM Plex Mono';
-            font-size: 2.22222222222vw;
-            line-height: 120%;
-            text-transform: uppercase;
-            text-align: center;
-            span {
-                font-weight: 700;
-            }
-        }
-        .poster {
-            width: 1055px;
-            height: 558px;
-            margin: 0 auto 51px auto;
-            background-image: url('../../assets/images/upload-to-earn.png');
-        }
-        .information {
-            .informationTitle {
-                margin: 0 0 25px 0;
-                font-family: 'IBM Plex Mono';
-                font-weight: 700;
-                font-size: 3.33333333333vw;
-                line-height: 120%;
-                text-align: center;
-                text-transform: uppercase;
-                color: #1d1d1f;
-            }
-            .informationText {
-                width: 52.5vw;
-                margin: 0 auto 43px auto;
-                font-family: 'IBM Plex Mono';
-                font-size: 1.45833333333vw;
-                line-height: 150%;
-                text-align: center;
-                color: #737373;
-            }
-        }
+    .title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 9.86111111111vw;
+      line-height: 120%;
+      text-transform: uppercase;
     }
+    .subtitle {
+      margin: 0 0 62px 0;
+      font-size: 2.22222222222vw;
+      line-height: 120%;
+      text-transform: uppercase;
+      text-align: center;
+      span {
+        font-weight: 700;
+      }
+    }
+    .poster {
+      width: 1055px;
+      height: 558px;
+      margin: 0 auto 51px auto;
+      background-image: url('../../assets/images/upload-to-earn.png');
+    }
+    .information {
+      .informationTitle {
+        margin: 0 0 25px 0;
+        font-weight: 700;
+        font-size: 3.33333333333vw;
+        line-height: 120%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #1d1d1f;
+      }
+      .informationText {
+        width: 52.5vw;
+        margin: 0 auto 43px auto;
+        font-size: 1.45833333333vw;
+        line-height: 150%;
+        text-align: center;
+        color: #737373;
+      }
+    }
+  }
+  .ownYourData {
+    display: flex;
+    justify-content: space-between;
+    gap: 7.56944444444vw;
+    padding: 228px 80px 98px 0;
+    background: #fafafa;
+    .leftPart {
+      position: relative;
+      .popup {
+        width: 340px;
+        height: 514px;
+        position: absolute;
+        top: -86px;
+        left: 138px;
+        background: #ffffff;
+        border: 0.5px dashed #454545;
+        img {
+          width: 316px;
+          height: 263px;
+          display: block;
+          margin: 12px auto 56px auto;
+          border: 0.5px dashed #454545;
+        }
+        .informationBlock {
+          h3 {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 1.25vw;
+            line-height: 150%;
+            text-align: center;
+            color: #1a1a1a;
+          }
+          p {
+            margin: 0 0 27px 0;
+            font-size: 0.97222222222vw;
+            line-height: 150%;
+            text-align: center;
+            color: #4b576c;
+          }
+        }
+      }
+      .poster {
+        width: 700px;
+        height: 560px;
+        background-image: url('../../assets/images/own-your-data.png');
+      }
+    }
+    .rightPart {
+      h2 {
+        width: 30.6944444444vw;
+        margin: 0 0 24px 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 4.58333333333vw;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #1d1d1f;
+      }
+      p {
+        margin: 0 0 24px 0;
+        padding: 0;
+        font-size: 1.45833333333vw;
+        line-height: 150%;
+        color: #737373;
+      }
+      span {
+        display: inline-block;
+        margin: 0 0 24px 0;
+        font-weight: 500;
+        font-size: 1.45833333333vw;
+        line-height: 150%;
+        color: #202124;
+      }
+      .currencies {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        img {
+          width: 39px;
+          height: 39px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .shareTradeCreate {
+    padding: 95px 0 132px 0;
+    background: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.08333333333vw;
+    .leftPart {
+      padding: 0 0 0 80px;
+      h2 {
+        padding: 0;
+        margin: 0 0 48px 0;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        color: #1d1d1f;
+      }
+      p {
+        width: 38.8888888889vw;
+        padding: 0;
+        margin: 0 0 32px 0;
+        font-size: 1.45833333333vw;
+        line-height: 150%;
+        color: #737373;
+      }
+      .wallets {
+        display: flex;
+        gap: 32px;
+        .img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .rightPart {
+      position: relative;
+      .popup {
+        width: 467px;
+        height: 437px;
+        position: absolute;
+        top: -55px;
+        right: 124px;
+        background-image: url('../../assets/images/share-trade-create-popup.png');
+        background-size: contain;
+      }
+      .poster {
+        width: 740px;
+        height: 577px;
+        background-image: url('../../assets/images/share-trade-create.png');
+      }
+    }
+  }
+  .coreFeatures {
+    .top {
+      position: relative;
+      height: 70px;
+      margin: 0 0 73px 0;
+      background: #202124;
+      font-family: 'IBM Plex Mono';
+      font-weight: 700;
+      font-size: 2.29166666667vw;
+      line-height: 70px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      &:after {
+        content: '';
+        position: absolute;
+        right: 17.0833333333vw;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 40px;
+        height: 40px;
+        background-image: url('../../assets/images/get-reward-arror.svg');
+      }
+    }
+    .content {
+      display: flex;
+      gap: 91px;
+      margin: 0 0 22px 0;
+      img {
+        max-height: 642px;
+      }
+      .rightPart {
+        h2 {
+          width: 29.375vw;
+          font-family: 'IBM Plex Mono';
+          font-weight: 600;
+          font-size: 6.11111111111vw;
+          text-transform: uppercase;
+        }
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li {
+            width: 29.3055555556vw;
+            position: relative;
+            font-size: 1.25vw;
+            margin: 0 0 24px 0;
+            &::before {
+              content: '';
+              position: absolute;
+              top: 9px;
+              left: -18px;
+              width: 5px;
+              height: 5px;
+              background: #000000;
+              border-radius: 50%;
+            }
+            span {
+              display: block;
+              margin: 0 0 8px 0;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+    .ribbon {
+      width: 58.3333333333vw;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        span {
+          font-family: 'IBM Plex Mono';
+          font-weight: 500;
+          font-size: 0.83333333333vw;
+          line-height: 20px;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: #000000;
+        }
+      }
+    }
+  }
+  .ghostdrivePricing {
+    .top {
+      margin: 80px 0 114px 0;
+      padding: 54px 0 10px 0;
+      background: #0f73ef;
+      font-family: 'IBM Plex Mono';
+      color: #ffffff;
+      text-transform: uppercase;
+      .title {
+        font-weight: 700;
+        font-size: 4.44444444444vw;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.1em;
+      }
+      .price {
+        font-weight: 700;
+        font-size: 6.38888888889vw;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.1em;
+        span {
+          font-weight: 500;
+        }
+      }
+      .paragraph {
+        font-weight: 700;
+        font-size: 3.05555555556vw;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 0.1em;
+      }
+    }
+    .content {
+      .title {
+        margin: 0 0 56px 0;
+        font-weight: 700;
+        font-size: 3.47222222222vw;
+        text-align: center;
+        text-transform: uppercase;
+        color: #1d1d1f;
+      }
+      .tableHeader {
+        height: 114px;
+        margin: 0 13.1944444444vw;
+        padding: 0 100px 0 32px;
+        background: #f9f9f9;
+        display: flex;
+        align-items: center;
+        .tabs {
+          display: flex;
+          margin: 0 8.54166666667vw 0 0;
+          .tab {
+            cursor: pointer;
+            user-select: none;
+            width: 142px;
+            height: 50px;
+            font-family: 'IBM Plex Mono';
+            font-size: 12px;
+            line-height: 50px;
+            text-align: center;
+            border: 0.5px solid #b9b9b9;
+            color: #202124;
+            &.active {
+              background: #202124;
+              color: #f4f4f4;
+              border: 0.5px solid transparent;
+            }
+          }
+        }
+        .items {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          .item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.97222222222vw;
+            color: #000000;
+            span {
+              font-weight: 700;
+              font-size: 1.66666666667vw;
+            }
+          }
+        }
+      }
+      .tableBody {
+        margin: 0 13.1944444444vw;
+        .row {
+          height: 64px;
+          display: flex;
+          align-items: center;
+          padding: 0 100px 0 32px;
+          &.grey {
+            background: #f9f9f9;
+          }
+          .rowTitle {
+            width: 20vw;
+            min-width: 20vw;
+            margin: 0 8.54166666667vw 0 0;
+            font-weight: 500;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #000000;
+            span {
+              display: block;
+              font-weight: 400;
+              font-size: 8px;
+              text-transform: uppercase;
+            }
+          }
+          .items {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 0.97222222222vw;
+            .item {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .features {
+        margin: 56px 0 24px 13.1944444444vw;
+        padding: 0 0 0 1.94444444444vw;
+        font-weight: 500;
+        font-size: 32px;
+        color: #000000;
+      }
+      .buttons {
+        display: flex;
+        justify-content: end;
+        gap: 96px;
+        margin: 27px 18.3333333333vw 164px 13.1944444444vw;
+        & > div {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .whaleBlock {
+    .leftPart {
+      .title {
+        span {
+        }
+      }
+      .card {
+        .cardTitle {
+        }
+        .cardRow {
+          span {
+          }
+        }
+      }
+      button {
+      }
+    }
+  }
 }
