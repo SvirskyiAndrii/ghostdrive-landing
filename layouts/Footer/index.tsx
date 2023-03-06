@@ -51,7 +51,7 @@ export default function Footer() {
             <span>Partners</span>
             <a href=''>Developers</a>
             <a href=''>Data Farmers</a>
-            <a href=''>Affiliate/Reseller</a>
+            <a href=''>Affiliate/ Reseller</a>
           </div>
           <div>
             <span>Docs</span>
@@ -61,9 +61,11 @@ export default function Footer() {
           </div>
           <div>
             <span>Offices</span>
-            <a href=''>Singapore</a>
-            <a href=''>United States</a>
-            <a href=''>Middle East</a>
+            <div className={styles.partners}>
+              <a href=''>Singapore</a>
+              <a href=''>United States</a>
+              <a href=''>Middle East</a>
+            </div>
           </div>
         </div>
       </div>

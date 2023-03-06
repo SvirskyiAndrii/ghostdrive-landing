@@ -18,7 +18,9 @@ import Whale from '../../assets/images/whale.png';
 import Toggle from '../../assets/images/toggle.svg';
 import FirstBlock from '../../assets/images/upload-to-earn.png';
 import SecondBlock from '../../assets/images/own-your-data.png';
+import SecondBlockMobile from '../../assets/images/own-your-data-mobile.png';
 import ThirdBlock from '../../assets/images/share-trade-create.png';
+import ThirdBlockMobile from '../../assets/images/share-trade-create-mobile.png';
 import AccessPopup from '../../assets/images/share-trade-create-popup.png';
 
 import styles from './styles.module.scss';
@@ -39,21 +41,25 @@ export const MainPage = () => {
             upload and manage their files. With advanced security features,
             including end-to-end encryption and two-factor authentication.
           </div>
-          <Button text='watch video' width={169} />
+          <Button text='watch video' width={{ desktop: 169, mobile: 99 }} />
         </div>
       </div>
       <div className={styles.ownYourData}>
         <div className={styles.leftPart}>
           <div className={styles.popup}>
             <img src={MagicWave.src} alt='' />
-
             <div className={styles.informationBlock}>
               <h3>The Magic Wave art</h3>
               <p>Just one more step before it’s yours!</p>
-              <Button text='0.00001BNB' width={283} />
+              <Button text='0.00001BNB' width={{ desktop: 283, mobile: 96 }} />
             </div>
           </div>
-          <img src={SecondBlock.src} alt='Macbook' />
+          <img src={SecondBlock.src} className={styles.desktop} alt='Macbook' />
+          <img
+            src={SecondBlockMobile.src}
+            className={styles.mobile}
+            alt='Macbook'
+          />
         </div>
         <div className={styles.rightPart}>
           <h2>OWN YOUR DATA with rewards</h2>
@@ -88,7 +94,12 @@ export const MainPage = () => {
         <div className={styles.rightPart}>
           <img src={AccessPopup.src} alt='Access' className={styles.popup} />
           <div className={styles.poster} />
-          <img src={ThirdBlock.src} alt='Macbook' />
+          <img src={ThirdBlock.src} className={styles.desktop} alt='Macbook' />
+          <img
+            src={ThirdBlockMobile.src}
+            className={styles.mobile}
+            alt='Macbook'
+          />
         </div>
       </div>
       <div className={styles.coreFeatures}>
@@ -251,13 +262,16 @@ export const MainPage = () => {
               <div className={styles.rowTitle}></div>
               <div className={styles.items}>
                 <div className={styles.item}>
-                  <Button text='sign up' width={123} />
+                  <Button text='sign up' width={{ desktop: 123, mobile: 54 }} />
                 </div>
                 <div className={styles.item}>
-                  <Button text='sign up' width={123} />
+                  <Button text='sign up' width={{ desktop: 123, mobile: 41 }} />
                 </div>
                 <div className={styles.item}>
-                  <Button text='Contact us' width={123} />
+                  <Button
+                    text='Contact us'
+                    width={{ desktop: 123, mobile: 59 }}
+                  />
                 </div>
               </div>
             </div>

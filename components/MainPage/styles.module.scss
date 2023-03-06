@@ -89,6 +89,9 @@
         display: block;
         width: 48.6111111111vw;
       }
+      .mobile {
+        display: none;
+      }
     }
     .rightPart {
       h2 {
@@ -134,7 +137,6 @@
     background: #fafafa;
     display: flex;
     justify-content: space-between;
-    gap: 2.08333333333vw;
     .leftPart {
       padding: 0 0 0 5.55555555556vw;
       h2 {
@@ -174,6 +176,9 @@
       img {
         display: block;
         width: 51.3888888889vw;
+      }
+      .mobile {
+        display: none;
       }
     }
   }
@@ -654,6 +659,428 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    .uploadToEarn {
+      padding: 0 0 29px 0;
+      .title {
+        font-size: 14.79165625vw;
+      }
+      .subtitle {
+        margin: 0 0 32px 0;
+        font-size: 3.33334375vw;
+      }
+      img {
+        width: 88.75vw;
+        margin: 0 auto 37px auto;
+      }
+      .information {
+        .informationTitle {
+          margin: 0 0 9px 0;
+          font-size: 5.625vw;
+        }
+        .informationText {
+          width: auto;
+          margin: 0 auto 22px auto;
+          padding: 0 5.3125vw;
+          font-size: 3.75vw;
+        }
+      }
+    }
+    .ownYourData {
+      flex-direction: column;
+      gap: 65px;
+      padding: 63px 5vw 41px 5vw;
+      .leftPart {
+        .popup {
+          width: 36.040625vw;
+          padding: 0 0 18px 0;
+          top: -13px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          img {
+            width: 33.496875vw;
+            margin: 4.07px auto 19px auto;
+          }
+          .informationBlock {
+            h3 {
+              font-size: 1.9080125vw;
+              margin: 0;
+            }
+            p {
+              margin: 0 0 9.4px 0;
+              font-size: 1.484009375vw;
+            }
+          }
+        }
+
+        .mobile {
+          display: block;
+          width: 85vw;
+          margin: 0;
+        }
+        .desktop {
+          display: none;
+        }
+      }
+      .rightPart {
+        text-align: center;
+        h2 {
+          width: 100%;
+          margin: 0 0 11px 0;
+          font-size: 5.625vw;
+        }
+        p {
+          margin: 0 0 15px 0;
+          font-size: 3.75vw;
+        }
+        span {
+          margin: 0 0 15px 0;
+          font-size: 3.125vw;
+        }
+        .currencies {
+          justify-content: center;
+          gap: 12.5vw;
+          img {
+            width: 7.5vw;
+            height: 24px;
+          }
+        }
+      }
+    }
+    .shareTradeCreate {
+      padding: 0 0 55px 0;
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 32px;
+      .leftPart {
+        padding: 0;
+        text-align: center;
+        h2 {
+          margin: 0 0 13px 0;
+          font-size: 5.625vw;
+        }
+        p {
+          padding: 0 4.6875vw;
+          width: calc(100% - 9.375vw);
+          margin: 0 0 32px 0;
+          font-size: 3.75vw;
+        }
+        .wallets {
+          justify-content: center;
+          gap: 6vw;
+          img {
+            width: 7.5vw;
+            height: 24px;
+          }
+        }
+      }
+      .rightPart {
+        .popup {
+          width: 44.6875vw;
+          top: -17px;
+          right: 34.0625vw;
+        }
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+          width: 90.3125vw;
+          margin: 0 auto;
+        }
+      }
+    }
+    .coreFeatures {
+      .top {
+        margin: 0 0 73px 0;
+        font-size: 3.1257vw;
+        &:after {
+          right: 3.125vw;
+          transform: translate(0, -50%);
+          width: 7.8125vw;
+          height: 25px;
+        }
+      }
+      .content {
+        position: relative;
+        flex-direction: column;
+        gap: 0;
+        margin: 0 0 15px 0;
+        img {
+          width: 100%;
+          position: relative;
+          left: -20px;
+          height: auto;
+        }
+        .rightPart {
+          h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 7.5vw;
+            position: absolute;
+            top: -32px;
+            margin: 0;
+          }
+          ul {
+            padding: 0 4.6875vw 0 9.375vw;
+            li {
+              width: 100%;
+              font-size: 3.75vw;
+              &::before {
+                top: 5px;
+                left: -9px;
+              }
+              span {
+                font-size: 4.375vw;
+              }
+            }
+          }
+        }
+      }
+      .ribbon {
+        width: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5.9375vw;
+        div {
+          gap: 3.125vw;
+          img {
+            width: 7.878125vw;
+            height: 25.21px;
+          }
+          span {
+            font-size: 2.36346875vw;
+          }
+        }
+      }
+    }
+    .ghostdrivePricing {
+      .top {
+        margin: 40px 0;
+        padding: 12.04px 0 24px 0;
+        .title {
+          font-size: 4.45834375vw;
+        }
+        .price {
+          font-size: 11.24334375vw;
+        }
+        .paragraph {
+          display: none;
+        }
+      }
+      .content {
+        .title {
+          margin: 0 0 24px 0;
+          font-size: 7.5vw;
+        }
+        .tableHeader {
+          height: 61px;
+          margin: 0;
+          padding: 0 3vw 0 3.75vw;
+          .tabs {
+            flex-direction: column;
+            margin: 0 5vw 0 0;
+            .tab {
+              width: 21.18125vw;
+              height: 24.19px;
+              font-size: 1.77956875vw;
+              line-height: 24.19px;
+            }
+          }
+          .items {
+            .item {
+              font-size: 2.5vw;
+              span {
+                font-size: 3.75vw;
+              }
+            }
+          }
+        }
+        .tableBody {
+          margin: 00;
+          .row {
+            height: 46px;
+            padding: 0 3vw 0 3.75vw;
+            .rowTitle {
+              margin: 0 8.54166666667vw 0 0;
+              font-size: 3.125vw;
+              span {
+                font-size: 1.875vw;
+                position: relative;
+                width: 80px;
+              }
+            }
+            .items {
+              font-size: 3.125vw;
+            }
+          }
+        }
+        .features {
+          margin: 32px 0 8px 2.5vw;
+          padding: 0;
+          font-size: 7.5vw;
+        }
+      }
+    }
+    .whaleBlock {
+      position: relative;
+      padding: 118px 5.9375vw 41px 3.75vw;
+      margin: 33.6px 0 57px 0;
+      .leftPart {
+        .title {
+          width: 100%;
+          position: absolute;
+          top: 23.87px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          text-align: center;
+          font-size: 7.5vw;
+          span {
+            font-size: 7.5vw;
+          }
+        }
+        .card {
+          width: 45.3125vw;
+          height: 66px;
+          margin: 0 0 9px 0;
+          padding: 0;
+          .cardContainer {
+            width: 45.3125vw;
+            height: 66px;
+          }
+          .cardContent {
+            .cardTitle {
+              margin: 9px 0 4px 12.7px;
+              font-size: 5.16665625vw;
+            }
+            .cardRow {
+              gap: 1.48125vw;
+              margin: 0 0 4.13px 3.96875vw;
+              span {
+                font-size: 2.5vw;
+                line-height: 10px;
+                &.name {
+                  width: 10.625vw;
+                }
+              }
+            }
+          }
+          .arrow1 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 6.69px;
+            height: 6.69px;
+            background-image: url('../../assets/images/card-arrow2.svg');
+            background-size: contain;
+            transform: rotate(180deg);
+          }
+          .arrow2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 6.69px;
+            height: 6.69px;
+            background-image: url('../../assets/images/card-arrow3.svg');
+            background-size: contain;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6.69px;
+            height: 6.69px;
+            background-image: url('../../assets/images/card-arrow1.svg');
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6.69px;
+            height: 6.69px;
+            background-image: url('../../assets/images/card-arrow2.svg');
+            background-size: contain;
+          }
+        }
+        button {
+          width: 45.3125vw;
+          height: 25px;
+          background: #ffffff;
+          font-size: 2.5vw;
+        }
+      }
+      .image_wrapper {
+        width: 31.29375vw;
+        height: 100.14px;
+        .img {
+          width: 31.29375vw;
+          height: 100.14px;
+        }
+        .img_border {
+          width: 27.99375vw;
+          height: 89.58px;
+        }
+        .img_logo {
+          width: 1.178125vw;
+          min-height: 3.77px;
+        }
+        .img_name_1 {
+          top: 8%;
+          left: 5.84722222222vw;
+        }
+        .img_name_2 {
+          top: 8%;
+          right: 5.84722222222vw;
+        }
+        .img_name_3 {
+          bottom: 8%;
+          left: 5.84722222222vw;
+        }
+        .img_name_4 {
+          bottom: 8%;
+          right: 5.84722222222vw;
+        }
+      }
+    }
+    .questionsAndAnswers {
+      h2 {
+        font-size: 7.5vw;
+        margin: 0 0 24px 0;
+      }
+    }
+    .handling {
+      gap: 1.153125vw;
+      margin: 0;
+      padding: 0 3.75vw 84.37 3.75vw;
+      .leftPart {
+        width: 33.13125vw;
+        padding: 26px 0 28px 3.096875vw;
+        button {
+          top: 7.38px;
+          right: 1.8vw;
+          img {
+            width: 5.7625vw;
+          }
+        }
+        div {
+          margin: 0 0 5.52px 0;
+          font-size: 2.875vw;
+        }
+      }
+      .rightPart {
+        width: 57.90625vw;
+        padding: 25.04px 1.728125vw 26.2px 1.728125vw;
+        p {
+          font-size: 4.0331875vw;
+        }
       }
     }
   }

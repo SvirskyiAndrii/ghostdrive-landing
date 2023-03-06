@@ -49,3 +49,35 @@
     margin: 0 0 50px 0;
   }
 }
+
+@media screen and (max-width: 560px) {
+  .container {
+    padding: 0 3.59375vw;
+    font-size: 3.75vw;
+    letter-spacing: 0.122185px;
+    .question {
+      width: calc(100% - 11.25vw);
+      height: 52px;
+      padding: 0 5.625vw;
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      &::after {
+        right: 2.625vw;
+        width: 13.58px;
+        height: 6.79px;
+        background-size: contain;
+      }
+      &.opened {
+        &::after {
+          right: 2.625vw;
+          width: 13.58px;
+          height: 6.79px;
+        }
+      }
+    }
+    .answer {
+      padding: 0 3.59375vw;
+    }
+  }
+}
