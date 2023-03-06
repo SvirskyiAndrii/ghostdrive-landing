@@ -1,5 +1,5 @@
 import { Button } from '../Button';
-import styles from './styles.module.scss';
+import { QuestionsAndAnswers } from '../QuestionsAndAnswers';
 import MagicWave from '../../assets/images/magic-wave.png';
 import Polygon from '../../assets/images/polygon.svg';
 import Ethereum from '../../assets/images/ethereum.svg';
@@ -9,12 +9,19 @@ import Metamask from '../../assets/images/metamask.svg';
 import Coinbase from '../../assets/images/coinbase.svg';
 import Unstoppable from '../../assets/images/unstoppable.svg';
 import CoreFeatures from '../../assets/images/core-features.png';
-
 import PolygonRibbon from '../../assets/images/polygon-ribbon.svg';
 import EthereumRibbon from '../../assets/images/ethereum-ribbon.svg';
 import BinanceRibbon from '../../assets/images/binance-ribbon.svg';
 import FilecoinRibbon from '../../assets/images/filecoin-ribbon.svg';
 import IpfsRibbon from '../../assets/images/ipfs-ribbon.svg';
+import Whale from '../../assets/images/whale.png';
+import Toggle from '../../assets/images/toggle.svg';
+import FirstBlock from '../../assets/images/upload-to-earn.png';
+import SecondBlock from '../../assets/images/own-your-data.png';
+import ThirdBlock from '../../assets/images/share-trade-create.png';
+import AccessPopup from '../../assets/images/share-trade-create-popup.png';
+
+import styles from './styles.module.scss';
 
 export const MainPage = () => {
   return (
@@ -24,7 +31,7 @@ export const MainPage = () => {
         <div className={styles.subtitle}>
           <span>1TB</span> for <span>4.99$</span>
         </div>
-        <div className={styles.poster} />
+        <img src={FirstBlock.src} alt='Macbook' />
         <div className={styles.information}>
           <div className={styles.informationTitle}>upload TO EARN</div>
           <div className={styles.informationText}>
@@ -32,7 +39,7 @@ export const MainPage = () => {
             upload and manage their files. With advanced security features,
             including end-to-end encryption and two-factor authentication.
           </div>
-          <Button text='watch video' />
+          <Button text='watch video' width={169} />
         </div>
       </div>
       <div className={styles.ownYourData}>
@@ -43,10 +50,10 @@ export const MainPage = () => {
             <div className={styles.informationBlock}>
               <h3>The Magic Wave art</h3>
               <p>Just one more step before it’s yours!</p>
-              <Button text='0.00001BNB' />
+              <Button text='0.00001BNB' width={283} />
             </div>
           </div>
-          <div className={styles.poster} />
+          <img src={SecondBlock.src} alt='Macbook' />
         </div>
         <div className={styles.rightPart}>
           <h2>OWN YOUR DATA with rewards</h2>
@@ -79,8 +86,9 @@ export const MainPage = () => {
           </div>
         </div>
         <div className={styles.rightPart}>
-          <div className={styles.popup}></div>
+          <img src={AccessPopup.src} alt='Access' className={styles.popup} />
           <div className={styles.poster} />
+          <img src={ThirdBlock.src} alt='Macbook' />
         </div>
       </div>
       <div className={styles.coreFeatures}>
@@ -239,34 +247,89 @@ export const MainPage = () => {
                 <div className={styles.item}>UNLIMITED</div>
               </div>
             </div>
-          </div>
-          <div className={styles.buttons}>
-            <Button text='sign up' />
-            <Button text='sign up' />
-            <Button text='Contact us' />
+            <div className={styles.row}>
+              <div className={styles.rowTitle}></div>
+              <div className={styles.items}>
+                <div className={styles.item}>
+                  <Button text='sign up' width={123} />
+                </div>
+                <div className={styles.item}>
+                  <Button text='sign up' width={123} />
+                </div>
+                <div className={styles.item}>
+                  <Button text='Contact us' width={123} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      {/* <div className={styles.whaleBlock}>
+      <div className={styles.whaleBlock}>
         <div className={styles.leftPart}>
           <div className={styles.title}>
-            <span>Get your Nft</span>
+            Get your Nft
             <span>lifetime access</span>
           </div>
           <div className={styles.card}>
-            <div className={styles.cardTitle}>BABY WHALE</div>
-            <div className={styles.cardRow}>
-              <span>COST</span>
-              <span>0.02 BNB</span>
-            </div>
-            <div className={styles.cardRow}>
-              <span>Network</span>
-              <span>BSC</span>
+            <div className={styles.arrow1}></div>
+            <div className={styles.arrow2}></div>
+            <div className={styles.cardContainer}></div>
+            <div className={styles.cardContent}>
+              <div className={styles.cardTitle}>BABY WHALE</div>
+              <div className={styles.cardRow}>
+                <span className={styles.name}>COST</span>
+                <span>0.02 BNB</span>
+              </div>
+              <div className={styles.cardRow}>
+                <span className={styles.name}>Network</span>
+                <span>BSC</span>
+              </div>
             </div>
           </div>
           <button>become nft member</button>
         </div>
-      </div> */}
+        <div className={styles.image_wrapper}>
+          <img className={styles.img} src={Whale.src} alt='Blue Whale' />
+          <div className={styles.img_border} />
+          <div className={styles.img_logo} />
+          <div className={styles.img_close} />
+          <div className={styles.img_name + ' ' + styles.img_name_1}>
+            GHOSTDRIVE
+          </div>
+          <div className={styles.img_name + ' ' + styles.img_name_2}>
+            BABYWHALE
+          </div>
+          <div className={styles.img_name + ' ' + styles.img_name_3}>
+            NFTPASS
+          </div>
+          <div className={styles.img_name + ' ' + styles.img_name_4}>
+            SUPPLY 21,000
+          </div>
+        </div>
+      </div>
+      <div className={styles.questionsAndAnswers}>
+        <h2>In case you missed SOMETHING</h2>
+        <QuestionsAndAnswers />
+      </div>
+      <div className={styles.handling}>
+        <div className={styles.leftPart}>
+          <button>
+            <img src={Toggle.src} alt='Toggle button' />
+          </button>
+          <div className={styles.word1}>SECURITY</div>
+          <div className={styles.word2}>Reliability</div>
+          <div>Scalability</div>
+          <div className={styles.word2}>Transparency </div>
+          <div className={styles.word3}>Tokenization</div>
+          <div className={styles.word1}>Data efficiency</div>
+        </div>
+        <div className={styles.rightPart}>
+          <p>
+            handling of large amounts of data and scale to meet the storage
+            needs of large organizations and industries
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

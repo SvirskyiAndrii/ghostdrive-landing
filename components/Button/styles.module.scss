@@ -1,72 +1,72 @@
 .wrapper {
-    width: 10.6944444444vw;
-    height: 34px;
-    margin: 0 auto;
-    position: relative;
-    top: 6px;
-    font-family: 'IBM Plex Mono';
-    font-weight: 500;
-    font-size: 0.83333333333vw;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    background: #202124;
-    color: #ffffff;
+  width: var(--width);
+  height: 34px;
+  margin: 0 auto;
+  position: relative;
+  top: 6px;
+  font-family: 'IBM Plex Mono';
+  font-weight: 500;
+  font-size: 0.83333333333vw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #202124;
+  color: #ffffff;
 
-    cursor: pointer;
-    user-select: none;
+  cursor: pointer;
+  user-select: none;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: url('../../assets/images/left-top-corner.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -6.5px;
+    top: -6.5px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: url('../../assets/images/right-top-corner.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: -6px;
+    top: -6px;
+  }
+  .cool_button {
+    width: var(--width);
+    height: 34px;
+    background: black;
+    position: relative;
+    color: white;
+    text-align: center;
+    line-height: 34px;
     &::before {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background-image: url('../../assets/images/left-top-corner.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        left: -6.5px;
-        top: -6.5px;
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-image: url('../../assets/images/right-top-corner.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: -6px;
+      bottom: -6px;
+      transform: rotate(180deg);
     }
     &::after {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background-image: url('../../assets/images/right-top-corner.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        right: -6px;
-        top: -6px;
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-image: url('../../assets/images/right-top-corner.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      right: -6px;
+      bottom: -6px;
+      transform: rotate(90deg);
     }
-    .cool_button {
-        width: 10.6944444444vw;
-        height: 34px;
-        background: black;
-        position: relative;
-        color: white;
-        text-align: center;
-        line-height: 34px;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-image: url('../../assets/images/right-top-corner.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            left: -6px;
-            bottom: -6px;
-            transform: rotate(180deg);
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-image: url('../../assets/images/right-top-corner.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            right: -6px;
-            bottom: -6px;
-            transform: rotate(90deg);
-        }
-    }
+  }
 }

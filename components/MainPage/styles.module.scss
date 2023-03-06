@@ -20,11 +20,10 @@
         font-weight: 700;
       }
     }
-    .poster {
-      width: 1055px;
-      height: 558px;
+    img {
+      width: 73.2638888889vw;
+      display: block;
       margin: 0 auto 51px auto;
-      background-image: url('../../assets/images/upload-to-earn.png');
     }
     .information {
       .informationTitle {
@@ -55,16 +54,15 @@
     .leftPart {
       position: relative;
       .popup {
-        width: 340px;
-        height: 514px;
+        width: 23.6111111111vw;
+        padding: 0 0 53px 0;
         position: absolute;
         top: -86px;
-        left: 138px;
+        left: 9.58333333333vw;
         background: #ffffff;
         border: 0.5px dashed #454545;
         img {
-          width: 316px;
-          height: 263px;
+          width: 21.9444444444vw;
           display: block;
           margin: 12px auto 56px auto;
           border: 0.5px dashed #454545;
@@ -87,10 +85,9 @@
           }
         }
       }
-      .poster {
-        width: 700px;
-        height: 560px;
-        background-image: url('../../assets/images/own-your-data.png');
+      img {
+        display: block;
+        width: 48.6111111111vw;
       }
     }
     .rightPart {
@@ -122,11 +119,12 @@
       .currencies {
         display: flex;
         align-items: center;
-        gap: 60px;
+        gap: 4.16666666667vw;
         img {
-          width: 39px;
+          width: 2.70833333333vw;
           height: 39px;
           cursor: pointer;
+          user-select: none;
         }
       }
     }
@@ -138,13 +136,12 @@
     justify-content: space-between;
     gap: 2.08333333333vw;
     .leftPart {
-      padding: 0 0 0 80px;
+      padding: 0 0 0 5.55555555556vw;
       h2 {
         padding: 0;
         margin: 0 0 48px 0;
         font-weight: 600;
-        font-size: 40px;
-        line-height: 120%;
+        font-size: 2.77777777778vw;
         color: #1d1d1f;
       }
       p {
@@ -157,9 +154,11 @@
       }
       .wallets {
         display: flex;
-        gap: 32px;
-        .img {
-          width: 40px;
+        gap: 2.22222222222vw;
+        img {
+          cursor: pointer;
+          user-select: none;
+          width: 1.45833333333vw;
           height: 40px;
         }
       }
@@ -167,18 +166,14 @@
     .rightPart {
       position: relative;
       .popup {
-        width: 467px;
-        height: 437px;
+        width: 32.4305555556vw;
         position: absolute;
         top: -55px;
-        right: 124px;
-        background-image: url('../../assets/images/share-trade-create-popup.png');
-        background-size: contain;
+        right: 8.61111111111vw;
       }
-      .poster {
-        width: 740px;
-        height: 577px;
-        background-image: url('../../assets/images/share-trade-create.png');
+      img {
+        display: block;
+        width: 51.3888888889vw;
       }
     }
   }
@@ -202,17 +197,21 @@
         right: 17.0833333333vw;
         top: 50%;
         transform: translate(0, -50%);
-        width: 40px;
+        width: 2.77777777778vw;
         height: 40px;
         background-image: url('../../assets/images/get-reward-arror.svg');
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
     .content {
       display: flex;
-      gap: 91px;
+      gap: 6.31944444444vw;
       margin: 0 0 22px 0;
       img {
-        max-height: 642px;
+        display: block;
+        width: 51.9444444444vw;
+        height: calc(100% - 100px);
       }
       .rightPart {
         h2 {
@@ -258,10 +257,10 @@
       justify-content: space-between;
       div {
         display: flex;
-        gap: 16px;
+        gap: 1.11111111111vw;
         align-items: center;
         img {
-          width: 40px;
+          width: 2.77777777778vw;
           height: 40px;
         }
         span {
@@ -321,7 +320,7 @@
       .tableHeader {
         height: 114px;
         margin: 0 13.1944444444vw;
-        padding: 0 100px 0 32px;
+        padding: 0 6.94444444444vw 0 2.22222222222vw;
         background: #f9f9f9;
         display: flex;
         align-items: center;
@@ -331,10 +330,10 @@
           .tab {
             cursor: pointer;
             user-select: none;
-            width: 142px;
+            width: 9.86111111111vw;
             height: 50px;
             font-family: 'IBM Plex Mono';
-            font-size: 12px;
+            font-size: 0.83333333333vw;
             line-height: 50px;
             text-align: center;
             border: 0.5px solid #b9b9b9;
@@ -371,7 +370,7 @@
           height: 64px;
           display: flex;
           align-items: center;
-          padding: 0 100px 0 32px;
+          padding: 0 6.94444444444vw 0 2.22222222222vw;
           &.grey {
             background: #f9f9f9;
           }
@@ -380,13 +379,13 @@
             min-width: 20vw;
             margin: 0 8.54166666667vw 0 0;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 1.11111111111vw;
             text-transform: uppercase;
             color: #000000;
             span {
               display: block;
               font-weight: 400;
-              font-size: 8px;
+              font-size: 0.55555555555vw;
               text-transform: uppercase;
             }
           }
@@ -407,35 +406,254 @@
         margin: 56px 0 24px 13.1944444444vw;
         padding: 0 0 0 1.94444444444vw;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 2.22222222222vw;
         color: #000000;
-      }
-      .buttons {
-        display: flex;
-        justify-content: end;
-        gap: 96px;
-        margin: 27px 18.3333333333vw 164px 13.1944444444vw;
-        & > div {
-          margin: 0;
-        }
       }
     }
   }
   .whaleBlock {
+    display: flex;
+    justify-content: space-between;
+    padding: 52px 7.98611111111vw 64px 5.55555555556vw;
+    margin: 164px 0 124px 0;
+    background: #202124;
+    color: #ffffff;
     .leftPart {
       .title {
+        font-weight: 700;
+        font-size: 5.625vw;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
         span {
+          display: block;
+          margin: 0 0 29px 0;
+          font-size: 4.35vw;
         }
       }
       .card {
-        .cardTitle {
+        position: relative;
+        width: 23.9583333333vw;
+        height: 12.0244444444vh;
+        margin: 0 0 16px 0;
+        padding: 0 0 21px 0;
+        .cardContainer {
+          position: absolute;
+          z-index: 1;
+          width: 23.9583333333vw;
+          height: 12.0244444444vh;
+          padding: 0 0 21px 0;
+          background: rgba(255, 255, 255, 0.2);
+          opacity: 0.1;
+          backdrop-filter: blur(2.50712px);
         }
-        .cardRow {
-          span {
+        .cardContent {
+          position: absolute;
+          z-index: 2;
+          .cardTitle {
+            margin: 18px 0 8px 24px;
+            font-weight: 700;
+            font-size: 2.22222222222vw;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
           }
+          .cardRow {
+            display: flex;
+            gap: 1.11111111111vw;
+            margin: 0 0 8px 1.66666666667vw;
+            span {
+              font-size: 0.97222222222vw;
+              line-height: 18px;
+              &.name {
+                width: 4.16666666667vw;
+              }
+            }
+          }
+        }
+        .arrow1 {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 6.69px;
+          height: 6.69px;
+          background-image: url('../../assets/images/card-arrow2.svg');
+          background-size: contain;
+          transform: rotate(180deg);
+        }
+        .arrow2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 6.69px;
+          height: 6.69px;
+          background-image: url('../../assets/images/card-arrow3.svg');
+          background-size: contain;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 6.69px;
+          height: 6.69px;
+          background-image: url('../../assets/images/card-arrow1.svg');
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 6.69px;
+          height: 6.69px;
+          background-image: url('../../assets/images/card-arrow2.svg');
+          background-size: contain;
         }
       }
       button {
+        cursor: pointer;
+        user-select: none;
+        width: 23.9583333333vw;
+        height: 48px;
+        background: #ffffff;
+        border: none;
+        padding: 0;
+        border-radius: 1px;
+        font-weight: 500;
+        font-size: 0.83333333333vw;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #202124;
+      }
+    }
+    .image_wrapper {
+      position: relative;
+      width: 26.7361111111vw;
+      height: 385px;
+      // height: 42.7777777778vh;
+      .img {
+        border-radius: 24px;
+        width: 26.7361111111vw;
+        height: 385px;
+        // height: 42.7777777778vh;
+        position: absolute;
+      }
+      .img_border {
+        width: 23.9111111111vw;
+        height: 344.32px;
+        // height: 38.2577777778vh;
+        border: 1px solid white;
+        border-radius: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .img_logo {
+        width: 1.00694444444vw;
+        min-height: 14.5px;
+        background-image: url('../../assets/images/img-logo.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 10%;
+        right: 50%;
+      }
+      .img_name {
+        font-family: 'IBM Plex Mono';
+        font-size: 0.48611111111vw;
+        line-height: 10px;
+        font-weight: 700;
+        position: absolute;
+      }
+      .img_name_1 {
+        top: 10%;
+        left: 2.84722222222vw;
+      }
+      .img_name_2 {
+        top: 10%;
+        right: 2.84722222222vw;
+      }
+      .img_name_3 {
+        bottom: 10%;
+        left: 2.84722222222vw;
+      }
+      .img_name_4 {
+        bottom: 10%;
+        right: 2.84722222222vw;
+      }
+    }
+  }
+  .questionsAndAnswers {
+    h2 {
+      font-weight: 700;
+      font-size: 3.47222222222vw;
+      line-height: 120%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #1d1d1f;
+    }
+  }
+  .handling {
+    display: flex;
+    gap: 1.11111111111vw;
+    margin: 150px 0 0 0;
+    padding: 56px 5.55555555556vw 64px 5.55555555556vw;
+    .leftPart {
+      position: relative;
+      background: #0f73ef;
+      border-radius: 10px;
+      width: 31.9444444444vw;
+      padding: 117px 0 92px 2.98611111111vw;
+      button {
+        position: absolute;
+        top: 32px;
+        right: 1.73611111111vw;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        user-select: none;
+        img {
+          width: 5.55555555556vw;
+        }
+      }
+      div {
+        margin: 0 0 24px 0;
+        font-weight: 700;
+        font-size: 2.77777777778vw;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      .word1 {
+        opacity: 0.1;
+      }
+      .word2 {
+        opacity: 0.6;
+      }
+      .word3 {
+        opacity: 0.2;
+      }
+    }
+    .rightPart {
+      width: 55.8333333333vw;
+      background: linear-gradient(180deg, #202430 0%, #151516 100%);
+      border-radius: 10px;
+      padding: 113px 1.66666666667vw 114px 1.66666666667vw;
+
+      p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 3.88888888889vw;
+        letter-spacing: -1.2px;
+        text-transform: uppercase;
+        background: linear-gradient(0deg, #0f73ef 50%, #ffffff 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
       }
     }
   }

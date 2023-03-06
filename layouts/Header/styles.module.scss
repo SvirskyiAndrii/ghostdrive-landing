@@ -1,64 +1,65 @@
 .header {
-    width: calc(100% - 160px);
-    height: 84px;
-    padding: 0 80px;
+  width: calc(100% - 160px);
+  height: 84px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 0 197px 0;
+  ul {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    text-transform: uppercase;
-    margin: 0 0 197px 0;
-    ul {
-        display: flex;
-        align-items: center;
-        gap: 0.69444444444vw;
-        list-style: none;
-        & li {
-            font-family: 'IBM Plex Mono';
-            font-weight: 500;
-            font-size: 0.83333333333vw;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #000000;
-            cursor: pointer;
-            user-select: none;
-            img {
-                margin: 0 65px 0 0;
-            }
-        }
-        .dot {
-            width: 2px;
-            height: 2px;
-            background: #202124;
-            border-radius: 50%;
-        }
+    gap: 0.69444444444vw;
+    list-style: none;
+    & li {
+      font-family: 'IBM Plex Mono';
+      font-weight: 500;
+      font-size: 0.83333333333vw;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #000000;
+      cursor: pointer;
+      user-select: none;
+      img {
+        width: 1.73611111111vw;
+        margin: 0 4.51388888889vw 0 0;
+      }
     }
-    .buttons {
-        display: flex;
-        gap: 8px;
-        button {
-            width: 10.6944444444vw;
-            height: 40px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            user-select: none;
-        }
-        .signIn {
-            font-family: 'IBM Plex Mono';
-            font-weight: 500;
-            font-size: 0.83333333333vw;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #202124;
-        }
-        .getStarted {
-            font-family: 'IBM Plex Mono';
-            font-weight: 500;
-            font-size: 0.83333333333vw;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            background: #202124;
-            color: #ffffff;
-        }
+    .dot {
+      width: 2px;
+      height: 2px;
+      background: #202124;
+      border-radius: 50%;
     }
+  }
+  .buttons {
+    display: flex;
+    gap: 8px;
+    button {
+      width: 10.6944444444vw;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+    }
+    .signIn {
+      font-family: 'IBM Plex Mono';
+      font-weight: 500;
+      font-size: 0.83333333333vw;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #202124;
+    }
+    .getStarted {
+      font-family: 'IBM Plex Mono';
+      font-weight: 500;
+      font-size: 0.83333333333vw;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: #202124;
+      color: #ffffff;
+    }
+  }
 }
