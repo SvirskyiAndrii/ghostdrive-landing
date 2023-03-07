@@ -1,0 +1,241 @@
+.container {
+  padding: 0 0 175px 0;
+  font-family: 'IBM Plex Mono';
+  color: #1d1d1f;
+  .title {
+    width: 45.1388888889vw;
+    margin: 0 0 163px 6.66666666667vw;
+    font-weight: 700;
+    font-size: 6.11111111111vw;
+    text-transform: uppercase;
+  }
+  .ghostPage {
+    padding: 0 0 0 7.91666666667vw;
+    display: flex;
+    position: relative;
+    margin: 0 0 416px 0;
+    img {
+      width: 62.6388888889vw;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 0;
+    }
+    .content {
+      .firstTitle {
+        &::before {
+          content: '';
+          position: absolute;
+          top: -56px;
+          background-image: url('../../assets/images/products-icon1.svg');
+          width: 40px;
+          height: 40px;
+        }
+        position: relative;
+        margin: 0;
+        font-weight: 400;
+        font-size: 2.77777777778vw;
+        text-transform: uppercase;
+        span {
+          font-weight: 500;
+        }
+      }
+      .secondTitle {
+        margin: 0 0 24px 0;
+        font-weight: 500;
+        font-size: 2.77777777778vw;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      p {
+        width: 38.8888888889vw;
+        margin: 0 0 27px 0;
+        font-size: 1.45833333333vw;
+        line-height: 150%;
+        color: #737373;
+      }
+      div {
+        margin: 0;
+      }
+    }
+  }
+  .ghostVault {
+    padding: 0 10.6944444444vw 0 0;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin: 0 0 556px 0;
+    img {
+      width: 53.0555555556vw;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+    }
+    .content {
+      width: 38.8888888889vw;
+      .firstTitle {
+        &::before {
+          content: '';
+          position: absolute;
+          top: -56px;
+          background-image: url('../../assets/images/products-icon2.svg');
+          width: 40px;
+          height: 40px;
+        }
+        position: relative;
+        margin: 0;
+        font-weight: 400;
+        font-size: 2.77777777778vw;
+        text-transform: uppercase;
+        span {
+          font-weight: 500;
+        }
+      }
+      .secondTitle {
+        font-weight: 400;
+        margin: 0 0 24px 0;
+        font-size: 2.77777777778vw;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      p {
+        width: 38.8888888889vw;
+        margin: 0 0 27px 0;
+        font-size: 1.45833333333vw;
+        line-height: 150%;
+        color: #737373;
+      }
+    }
+  }
+  .playground {
+    padding: 0 0 0 7.91666666667vw;
+    display: flex;
+    position: relative;
+    margin: 0 0 416px 0;
+    img {
+      width: 49.5833333333vw;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 0;
+    }
+    .content {
+      .firstTitle {
+        &::before {
+          content: '';
+          position: absolute;
+          top: -56px;
+          background-image: url('../../assets/images/products-icon3.svg');
+          width: 40px;
+          height: 40px;
+        }
+        position: relative;
+        margin: 0;
+        font-weight: 500;
+        font-size: 2.77777777778vw;
+        text-transform: uppercase;
+      }
+      p {
+        width: 38.8888888889vw;
+        margin: 0 0 27px 0;
+        font-size: 1.45833333333vw;
+        line-height: 150%;
+        color: #737373;
+      }
+      div {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    padding: 0;
+    .title {
+      width: 100%;
+      text-align: center;
+      margin: 0 0 60px 0;
+    }
+    .ghostPage {
+      padding: 0;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 60px 0;
+      img {
+        width: 80vw;
+        position: static;
+        transform: none;
+        margin: 0 0 100px 0;
+      }
+      .content {
+        .firstTitle {
+          font-size: 5.5vw;
+        }
+        .secondTitle {
+          font-size: 5.5vw;
+        }
+        p {
+          width: 80vw;
+          font-size: 3.5vw;
+        }
+      }
+    }
+    .ghostVault {
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 60px 0;
+      img {
+        width: 80vw;
+        position: static;
+        transform: none;
+        margin: 0 0 100px 0;
+      }
+      .content {
+        width: 80vw;
+        .firstTitle {
+          font-size: 5.5vw;
+        }
+        .secondTitle {
+          font-size: 5.5vw;
+        }
+        p {
+          width: 80vw;
+          font-size: 3.5vw;
+        }
+        div {
+          margin: 0;
+        }
+      }
+    }
+    .playground {
+      padding: 0;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 60px 0;
+      img {
+        width: 80vw;
+        position: static;
+        transform: none;
+        margin: 0 0 100px 0;
+      }
+      .content {
+        .firstTitle {
+          font-size: 5.5vw;
+        }
+        .secondTitle {
+          font-size: 5.5vw;
+        }
+        p {
+          width: 80vw;
+          font-size: 3.5vw;
+        }
+      }
+    }
+  }
+}
