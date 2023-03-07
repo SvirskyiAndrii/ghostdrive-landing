@@ -1,12 +1,20 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import router from 'next/router';
 import { Button } from '../../components/Button';
 import Logo from '../../assets/images/header-logo.svg';
 
 import styles from './styles.module.scss';
 
+const items = [
+  { path: '/', element: <img src={Logo.src} alt='Logo' /> },
+  { path: '/products', element: 'Products' },
+  { path: '/pricing', element: 'Pricing' },
+  { path: '/features', element: 'Features' },
+];
+
 export default function Header() {
   const [isOpened, setIsOpened] = useState(false);
+  const [active, setActive] = useState<number>(0);
 
   const navigate = (to: string) => {
     router.push(to);
@@ -30,73 +38,57 @@ export default function Header() {
         onClick={openMenu}
       />
       <ul className={styles.desktop}>
-        <li
-          onClick={() => {
-            navigate('/');
-          }}
-        >
-          <img src={Logo.src} alt='Logo' />
-        </li>
-        <li
-          onClick={() => {
-            navigate('/products');
-          }}
-        >
-          Products
-        </li>
-        <span className={styles.dot} />
-        <li
-          onClick={() => {
-            navigate('/');
-          }}
-        >
-          Pricing
-        </li>
-        <span className={styles.dot} />
-        <li
-          onClick={() => {
-            navigate('/');
-          }}
-        >
-          Features
-        </li>
+        {items.map(({ path, element }, index) => {
+          return (
+            <li
+              key={`li-${index}`}
+              className={`${
+                index !== 0 && index !== items.length - 1 ? styles.dot : ''
+              } ${active === index ? styles.active : ''}`}
+              onClick={() => {
+                navigate(path);
+                setActive(index);
+              }}
+            >
+              {element}
+            </li>
+          );
+        })}
       </ul>
       <div className={styles.buttons}>
-        <button className={styles.signIn}>sign in</button>
-        <Button text='get started' width={{ desktop: 156, mobile: 95 }} />
+        <button
+          className={styles.signIn}
+          onClick={() => {
+            window.open('https://app.ghostdrive.io/sign-in');
+          }}
+        >
+          sign in
+        </button>
+        <Button
+          text='get started'
+          width={{ desktop: 156, mobile: 95 }}
+          onClick={() => {
+            window.open('https://ghostdrive.io/nft');
+          }}
+        />
       </div>
       {isOpened && (
         <ul className={styles.mobile}>
-          <li
-            onClick={() => {
-              navigate('/products');
-            }}
-          >
-            Products
-          </li>
-          <span className={styles.dot} />
-          <li
-            onClick={() => {
-              navigate('/');
-            }}
-          >
-            Pricing
-          </li>
-          <span className={styles.dot} />
-          <li
-            onClick={() => {
-              navigate('/');
-            }}
-          >
-            Features
-          </li>
-          <li
-            onClick={() => {
-              navigate('/');
-            }}
-          >
-            <img src={Logo.src} alt='Logo' />
-          </li>
+          {items.map(({ path, element }, index) => {
+            return (
+              <li
+                key={`li-mobile-${index}`}
+                className={`${active === index ? styles.active : ''}`}
+                onClick={() => {
+                  navigate(path);
+                  setActive(index);
+                  setIsOpened(false);
+                }}
+              >
+                {element}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

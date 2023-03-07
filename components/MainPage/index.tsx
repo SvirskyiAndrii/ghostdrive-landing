@@ -1,5 +1,6 @@
 import { Button } from '../Button';
 import { QuestionsAndAnswers } from '../QuestionsAndAnswers';
+import { PricingBlock } from '../PricingBlock';
 import MagicWave from '../../assets/images/magic-wave.png';
 import Polygon from '../../assets/images/polygon.svg';
 import Ethereum from '../../assets/images/ethereum.svg';
@@ -26,6 +27,10 @@ import AccessPopup from '../../assets/images/share-trade-create-popup.png';
 import styles from './styles.module.scss';
 
 export const MainPage = () => {
+  let referral: any;
+  if (typeof window !== 'undefined') {
+    referral = new URLSearchParams(window.location.search).get('referral');
+  }
   return (
     <div className={styles.container}>
       <div className={styles.uploadToEarn}>
@@ -103,7 +108,14 @@ export const MainPage = () => {
         </div>
       </div>
       <div className={styles.coreFeatures}>
-        <div className={styles.top}>FOR EACH YOU UPLOAD GET REWARDS</div>
+        <div
+          className={styles.top}
+          onClick={() => {
+            window.open('https://ghostdrive.io/nft');
+          }}
+        >
+          FOR EACH YOU UPLOAD GET REWARDS
+        </div>
         <div className={styles.content}>
           <img src={CoreFeatures.src} alt='' />
           <div className={styles.rightPart}>
@@ -158,125 +170,8 @@ export const MainPage = () => {
           </div>
           <div className={styles.paragraph}>earn Token system</div>
         </div>
-        <div className={styles.content}>
-          <h2 className={styles.title}>GHOSTDRIVE pricing</h2>
-          <div className={styles.tableHeader}>
-            <div className={styles.tabs}>
-              <div className={`${styles.tab} ${styles.active}`}>
-                Billed Yearly
-              </div>
-              <div className={styles.tab}>Billed Monthly</div>
-            </div>
-            <div className={styles.items}>
-              <div className={styles.item}>
-                Solo <span>FREE</span>
-              </div>
-              <div className={styles.item}>
-                Team <span>$9.99/mo</span>
-              </div>
-              <div className={styles.item}>
-                Unlimited <span>CUSTOM</span>
-              </div>
-            </div>
-          </div>
-          <div className={styles.tableBody}>
-            <div className={styles.row}>
-              <div className={styles.rowTitle}>Upload Limit Size</div>
-              <div className={styles.items}>
-                <div className={styles.item}>250MB</div>
-                <div className={styles.item}>1GB</div>
-                <div className={styles.item}>UNLIMITED</div>
-              </div>
-            </div>
-            <div className={`${styles.row} ${styles.grey}`}>
-              <div className={styles.rowTitle}>Workspaces</div>
-              <div className={styles.items}>
-                <div className={styles.item}>1</div>
-                <div className={styles.item}>5</div>
-                <div className={styles.item}>UNLIMITED</div>
-              </div>
-            </div>
-            <div className={styles.row}>
-              <div className={styles.rowTitle}>Members</div>
-              <div className={styles.items}>
-                <div className={styles.item}>2</div>
-                <div className={styles.item}>10</div>
-                <div className={styles.item}>UNLIMITED</div>
-              </div>
-            </div>
-            <div className={`${styles.row} ${styles.grey}`}>
-              <div className={styles.rowTitle}>Storage</div>
-              <div className={styles.items}>
-                <div className={styles.item}>5GB</div>
-                <div className={styles.item}>1TB</div>
-                <div className={styles.item}>UNLIMITED</div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.features}>FEATURES</div>
-          <div className={styles.tableBody}>
-            <div className={styles.row}>
-              <div className={styles.rowTitle}>Tokenization</div>
-              <div className={styles.items}>
-                <div className={styles.item}>YES</div>
-                <div className={styles.item}>YES</div>
-                <div className={styles.item}>YES</div>
-              </div>
-            </div>
-            <div className={`${styles.row} ${styles.grey}`}>
-              <div className={styles.rowTitle}>pages</div>
-              <div className={styles.items}>
-                <div className={styles.item}>YES</div>
-                <div className={styles.item}>YES</div>
-                <div className={styles.item}>YES</div>
-              </div>
-            </div>
-            <div className={styles.row}>
-              <div className={styles.rowTitle}>
-                AI CREATOR
-                <span>text to image/ image to image/ image scaler</span>
-              </div>
-              <div className={styles.items}>
-                <div className={styles.item}>3 TOKENS</div>
-                <div className={styles.item}>2 TOKENS</div>
-                <div className={styles.item}>1 TOKENS</div>
-              </div>
-            </div>
-            <div className={`${styles.row} ${styles.grey}`}>
-              <div className={styles.rowTitle}>VAULT</div>
-              <div className={styles.items}>
-                <div className={styles.item}>LIMITED</div>
-                <div className={styles.item}>UNLIMITED</div>
-                <div className={styles.item}>UNLIMITED</div>
-              </div>
-            </div>
-            <div className={styles.row}>
-              <div className={styles.rowTitle}>SECURITY</div>
-              <div className={styles.items}>
-                <div className={styles.item}>LIMITED</div>
-                <div className={styles.item}>PRO</div>
-                <div className={styles.item}>UNLIMITED</div>
-              </div>
-            </div>
-            <div className={styles.row}>
-              <div className={styles.rowTitle}></div>
-              <div className={styles.items}>
-                <div className={styles.item}>
-                  <Button text='sign up' width={{ desktop: 123, mobile: 54 }} />
-                </div>
-                <div className={styles.item}>
-                  <Button text='sign up' width={{ desktop: 123, mobile: 41 }} />
-                </div>
-                <div className={styles.item}>
-                  <Button
-                    text='Contact us'
-                    width={{ desktop: 123, mobile: 59 }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2 className={styles.title}>GHOSTDRIVE'S pricing</h2>
+        <PricingBlock />
       </div>
       <div className={styles.whaleBlock}>
         <div className={styles.leftPart}>
@@ -300,7 +195,17 @@ export const MainPage = () => {
               </div>
             </div>
           </div>
-          <button>become nft member</button>
+          <button
+            onClick={() => {
+              window.open(
+                `https://app.ghostdrive.io/sign-up-metamask${
+                  referral ? `?referral=${referral}` : ''
+                }`
+              );
+            }}
+          >
+            become nft member
+          </button>
         </div>
         <div className={styles.image_wrapper}>
           <img className={styles.img} src={Whale.src} alt='Blue Whale' />

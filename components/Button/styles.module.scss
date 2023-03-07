@@ -11,6 +11,13 @@
   text-transform: uppercase;
   background: #202124;
   color: #ffffff;
+  &:hover {
+    .cool_button {
+      color: #202124;
+      background-color: #ffffff;
+      border: 1px solid #2021245e;
+    }
+  }
 
   cursor: pointer;
   user-select: none;
@@ -37,8 +44,10 @@
     top: -6px;
   }
   .cool_button {
+    transition: all 0.1s ease-in-out;
     width: var(--width);
-    height: 34px;
+    height: 32px;
+    border: 1px solid transparent;
     background: black;
     position: relative;
     color: white;

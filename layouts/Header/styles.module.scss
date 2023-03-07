@@ -13,9 +13,10 @@
   ul {
     display: flex;
     align-items: center;
-    gap: 0.69444444444vw;
+    gap: 1.73611111111vw;
     list-style: none;
     & li {
+      position: relative;
       font-family: 'IBM Plex Mono';
       font-weight: 500;
       font-size: 0.83333333333vw;
@@ -24,17 +25,35 @@
       color: #000000;
       cursor: pointer;
       user-select: none;
+      transition: all 0.6s ease-in-out;
+
       img {
         width: 1.73611111111vw;
         margin: 0 4.51388888889vw 0 0;
       }
+
+      &.active {
+        text-decoration: underline;
+      }
+
+      &.dot {
+        &::after {
+          content: '';
+          position: absolute;
+          top: calc(50% - 1px);
+          right: -0.90277777777vw;
+          width: 2px;
+          height: 2px;
+          background: #202124;
+          border-radius: 50%;
+        }
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
-    .dot {
-      width: 2px;
-      height: 2px;
-      background: #202124;
-      border-radius: 50%;
-    }
+
     &.mobile {
       display: none;
     }
@@ -49,6 +68,10 @@
       border: none;
       cursor: pointer;
       user-select: none;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: #0000000b;
+      }
     }
     .signIn {
       font-family: 'IBM Plex Mono';
@@ -123,12 +146,6 @@
           width: 7.5vw;
           margin: 0;
         }
-      }
-      .dot {
-        width: 2px;
-        height: 2px;
-        background: #202124;
-        border-radius: 50%;
       }
       &.mobile {
         display: block;

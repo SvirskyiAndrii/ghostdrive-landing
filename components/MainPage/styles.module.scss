@@ -184,6 +184,8 @@
   }
   .coreFeatures {
     .top {
+      cursor: pointer;
+      user-select: none;
       position: relative;
       height: 70px;
       margin: 0 0 73px 0;
@@ -294,6 +296,7 @@
         line-height: 130%;
         text-align: center;
         letter-spacing: 0.1em;
+        color: #ffffff;
       }
       .price {
         font-weight: 700;
@@ -313,107 +316,13 @@
         letter-spacing: 0.1em;
       }
     }
-    .content {
-      .title {
-        margin: 0 0 56px 0;
-        font-weight: 700;
-        font-size: 3.47222222222vw;
-        text-align: center;
-        text-transform: uppercase;
-        color: #1d1d1f;
-      }
-      .tableHeader {
-        height: 114px;
-        margin: 0 13.1944444444vw;
-        padding: 0 6.94444444444vw 0 2.22222222222vw;
-        background: #f9f9f9;
-        display: flex;
-        align-items: center;
-        .tabs {
-          display: flex;
-          margin: 0 8.54166666667vw 0 0;
-          .tab {
-            cursor: pointer;
-            user-select: none;
-            width: 9.86111111111vw;
-            height: 50px;
-            font-family: 'IBM Plex Mono';
-            font-size: 0.83333333333vw;
-            line-height: 50px;
-            text-align: center;
-            border: 0.5px solid #b9b9b9;
-            color: #202124;
-            &.active {
-              background: #202124;
-              color: #f4f4f4;
-              border: 0.5px solid transparent;
-            }
-          }
-        }
-        .items {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          .item {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            font-weight: 500;
-            font-size: 0.97222222222vw;
-            color: #000000;
-            span {
-              font-weight: 700;
-              font-size: 1.66666666667vw;
-            }
-          }
-        }
-      }
-      .tableBody {
-        margin: 0 13.1944444444vw;
-        .row {
-          height: 64px;
-          display: flex;
-          align-items: center;
-          padding: 0 6.94444444444vw 0 2.22222222222vw;
-          &.grey {
-            background: #f9f9f9;
-          }
-          .rowTitle {
-            width: 20vw;
-            min-width: 20vw;
-            margin: 0 8.54166666667vw 0 0;
-            font-weight: 500;
-            font-size: 1.11111111111vw;
-            text-transform: uppercase;
-            color: #000000;
-            span {
-              display: block;
-              font-weight: 400;
-              font-size: 0.55555555555vw;
-              text-transform: uppercase;
-            }
-          }
-          .items {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            font-weight: 500;
-            font-size: 0.97222222222vw;
-            .item {
-              width: 100%;
-              text-align: center;
-            }
-          }
-        }
-      }
-      .features {
-        margin: 56px 0 24px 13.1944444444vw;
-        padding: 0 0 0 1.94444444444vw;
-        font-weight: 500;
-        font-size: 2.22222222222vw;
-        color: #000000;
-      }
+    .title {
+      margin: 0 0 56px 0;
+      font-weight: 700;
+      font-size: 3.47222222222vw;
+      text-align: center;
+      text-transform: uppercase;
+      color: #1d1d1f;
     }
   }
   .whaleBlock {
@@ -874,58 +783,9 @@
           display: none;
         }
       }
-      .content {
-        .title {
-          margin: 0 0 24px 0;
-          font-size: 7.5vw;
-        }
-        .tableHeader {
-          height: 61px;
-          margin: 0;
-          padding: 0 3vw 0 3.75vw;
-          .tabs {
-            flex-direction: column;
-            margin: 0 5vw 0 0;
-            .tab {
-              width: 21.18125vw;
-              height: 24.19px;
-              font-size: 1.77956875vw;
-              line-height: 24.19px;
-            }
-          }
-          .items {
-            .item {
-              font-size: 2.5vw;
-              span {
-                font-size: 3.75vw;
-              }
-            }
-          }
-        }
-        .tableBody {
-          margin: 00;
-          .row {
-            height: 46px;
-            padding: 0 3vw 0 3.75vw;
-            .rowTitle {
-              margin: 0 8.54166666667vw 0 0;
-              font-size: 3.125vw;
-              span {
-                font-size: 1.875vw;
-                position: relative;
-                width: 80px;
-              }
-            }
-            .items {
-              font-size: 3.125vw;
-            }
-          }
-        }
-        .features {
-          margin: 32px 0 8px 2.5vw;
-          padding: 0;
-          font-size: 7.5vw;
-        }
+      .title {
+        margin: 0 0 24px 0;
+        font-size: 7.5vw;
       }
     }
     .whaleBlock {
