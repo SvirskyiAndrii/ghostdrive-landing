@@ -38,13 +38,13 @@ export const subscriptions = {
     },
     vault: {
       solo: 'LIMITED',
-      team: 'unLIMITED',
-      custom: 'unLIMITED',
+      team: 'UNLIMITED',
+      custom: 'UNLIMITED',
     },
     security: {
       solo: 'LIMITED',
       team: 'pro',
-      custom: 'unLIMITED',
+      custom: 'UNLIMITED',
     },
   },
   monthly: {
