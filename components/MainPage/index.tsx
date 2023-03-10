@@ -170,7 +170,7 @@ export const MainPage = () => {
           </div>
           <div className={styles.paragraph}>earn Token system</div>
         </div>
-        <h2 className={styles.title}>GHOSTDRIVE'S pricing</h2>
+        <h2 className={styles.title}>{"GHOSTDRIVE'S pricing"}</h2>
         <PricingBlock />
       </div>
       <div className={styles.whaleBlock}>
