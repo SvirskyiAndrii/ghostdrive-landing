@@ -1,11 +1,13 @@
 import { useState } from 'react';
+
+import Portal from '../HOC/Portal';
 import { Button } from '../Button';
+import { Modal } from '../Modal';
+import { ContactUs } from '../ContactUs';
 import { subscriptions } from './subscriptions';
+import getStripe from '../../lib/getStripe';
 
 import styles from './styles.module.scss';
-import { ContactUs } from '../ContactUs';
-import { Modal } from '../Modal';
-import Portal from '../HOC/Portal';
 
 export const PricingBlock = () => {
   const [data, setData] = useState(subscriptions.annually);
@@ -15,6 +17,24 @@ export const PricingBlock = () => {
   if (typeof window !== 'undefined') {
     referral = new URLSearchParams(window.location.search).get('referral');
   }
+
+  async function handleCheckout() {
+    const stripe: any = await getStripe();
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [
+        {
+          price: process.env.NEXT_PUBLIC_STRIPE_PRICE_ID,
+          quantity: 1,
+        },
+      ],
+      mode: 'payment',
+      successUrl: process.env.NEXT_PUBLIC_SUCCESS,
+      cancelUrl: process.env.NEXT_PUBLIC_CANCEL,
+      customerEmail: 'customer@email.com',
+    });
+    console.warn(error.message);
+  }
+
   return (
     <>
       <div className={styles.content}>
@@ -149,11 +169,7 @@ export const PricingBlock = () => {
                   text='buy'
                   width={{ desktop: 123, mobile: 41 }}
                   onClick={() => {
-                    window.open(
-                      `https://app.ghostdrive.io/sign-up-metamask${
-                        referral ? `?referral=${referral}` : ''
-                      }`
-                    );
+                    handleCheckout();
                   }}
                 />
               </div>

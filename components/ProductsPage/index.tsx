@@ -27,6 +27,9 @@ export const ProductsPage = () => {
               desktop: 139,
               mobile: 100,
             }}
+            onClick={() => {
+              window.open('https://ghostdrive.io/nft');
+            }}
           />
         </div>
         <img src={FirstBlock.src} alt='Ipad' />
@@ -57,6 +60,9 @@ export const ProductsPage = () => {
             width={{
               desktop: 139,
               mobile: 100,
+            }}
+            onClick={() => {
+              window.open('https://ghostdrive.io/nft');
             }}
           />
         </div>
