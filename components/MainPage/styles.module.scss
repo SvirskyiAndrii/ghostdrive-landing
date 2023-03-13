@@ -206,21 +206,27 @@
         transform: translate(0, -50%);
         width: 2.77777777778vw;
         height: 40px;
-        background-image: url('../../assets/images/get-reward-arror.svg');
+        background-image: url('../../public/images/get-reward-arror.svg');
         background-position: center;
         background-repeat: no-repeat;
       }
     }
     .content {
       display: flex;
-      gap: 6.31944444444vw;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: end;
       margin: 0 0 22px 0;
-      img {
-        display: block;
-        width: 51.9444444444vw;
-        height: calc(100% - 100px);
+      position: relative;
+      padding: 0 11.5277777778vw 0 0;
+      video {
+        z-index: 0;
+        position: absolute;
+        left: -13.8888888889vw;
       }
       .rightPart {
+        position: relative;
+        z-index: 1;
         h2 {
           width: 29.375vw;
           font-family: 'IBM Plex Mono';
@@ -390,7 +396,7 @@
           left: 0;
           width: 6.69px;
           height: 6.69px;
-          background-image: url('../../assets/images/card-arrow2.svg');
+          background-image: url('../../public/images/card-arrow2.svg');
           background-size: contain;
           transform: rotate(180deg);
         }
@@ -400,7 +406,7 @@
           right: 0;
           width: 6.69px;
           height: 6.69px;
-          background-image: url('../../assets/images/card-arrow3.svg');
+          background-image: url('../../public/images/card-arrow3.svg');
           background-size: contain;
         }
         &::after {
@@ -410,7 +416,7 @@
           left: 0;
           width: 6.69px;
           height: 6.69px;
-          background-image: url('../../assets/images/card-arrow1.svg');
+          background-image: url('../../public/images/card-arrow1.svg');
         }
         &::before {
           content: '';
@@ -419,7 +425,7 @@
           right: 0;
           width: 6.69px;
           height: 6.69px;
-          background-image: url('../../assets/images/card-arrow2.svg');
+          background-image: url('../../public/images/card-arrow2.svg');
           background-size: contain;
         }
       }
@@ -467,7 +473,7 @@
       .img_logo {
         width: 1.00694444444vw;
         min-height: 14.5px;
-        background-image: url('../../assets/images/img-logo.svg');
+        background-image: url('../../public/images/img-logo.svg');
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
@@ -720,21 +726,25 @@
       .content {
         position: relative;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 0;
         margin: 0 0 15px 0;
-        img {
+        padding: 0;
+        video {
           width: 100%;
           position: relative;
-          left: -20px;
-          height: auto;
+          left: 0;
+          margin: 80px 0 0 0;
         }
         .rightPart {
+          position: unset;
           h2 {
             width: 100%;
             text-align: center;
             font-size: 7.5vw;
             position: absolute;
-            top: -32px;
+            top: 0;
             margin: 0;
           }
           ul {
@@ -838,7 +848,7 @@
             left: 0;
             width: 6.69px;
             height: 6.69px;
-            background-image: url('../../assets/images/card-arrow2.svg');
+            background-image: url('../../public/images/card-arrow2.svg');
             background-size: contain;
             transform: rotate(180deg);
           }
@@ -848,7 +858,7 @@
             right: 0;
             width: 6.69px;
             height: 6.69px;
-            background-image: url('../../assets/images/card-arrow3.svg');
+            background-image: url('../../public/images/card-arrow3.svg');
             background-size: contain;
           }
           &::after {
@@ -858,7 +868,7 @@
             left: 0;
             width: 6.69px;
             height: 6.69px;
-            background-image: url('../../assets/images/card-arrow1.svg');
+            background-image: url('../../public/images/card-arrow1.svg');
           }
           &::before {
             content: '';
@@ -867,7 +877,7 @@
             right: 0;
             width: 6.69px;
             height: 6.69px;
-            background-image: url('../../assets/images/card-arrow2.svg');
+            background-image: url('../../public/images/card-arrow2.svg');
             background-size: contain;
           }
         }

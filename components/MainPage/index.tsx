@@ -1,28 +1,27 @@
 import { Button } from '../Button';
 import { QuestionsAndAnswers } from '../QuestionsAndAnswers';
 import { PricingBlock } from '../PricingBlock';
-import MagicWave from '../../assets/images/magic-wave.png';
-import Polygon from '../../assets/images/polygon.svg';
-import Ethereum from '../../assets/images/ethereum.svg';
-import Binance from '../../assets/images/binance.svg';
-import Diamond from '../../assets/images/diamond.svg';
-import Metamask from '../../assets/images/metamask.svg';
-import Coinbase from '../../assets/images/coinbase.svg';
-import Unstoppable from '../../assets/images/unstoppable.svg';
-import CoreFeatures from '../../assets/images/core-features.png';
-import PolygonRibbon from '../../assets/images/polygon-ribbon.svg';
-import EthereumRibbon from '../../assets/images/ethereum-ribbon.svg';
-import BinanceRibbon from '../../assets/images/binance-ribbon.svg';
-import FilecoinRibbon from '../../assets/images/filecoin-ribbon.svg';
-import IpfsRibbon from '../../assets/images/ipfs-ribbon.svg';
-import Whale from '../../assets/images/whale.png';
-import Toggle from '../../assets/images/toggle.svg';
-import FirstBlock from '../../assets/images/upload-to-earn.png';
-import SecondBlock from '../../assets/images/own-your-data.png';
-import SecondBlockMobile from '../../assets/images/own-your-data-mobile.png';
-import ThirdBlock from '../../assets/images/share-trade-create.png';
-import ThirdBlockMobile from '../../assets/images/share-trade-create-mobile.png';
-import AccessPopup from '../../assets/images/share-trade-create-popup.png';
+import Polygon from '../../public/images/polygon.svg';
+import Ethereum from '../../public/images/ethereum.svg';
+import Binance from '../../public/images/binance.svg';
+import Diamond from '../../public/images/diamond.svg';
+import Metamask from '../../public/images/metamask.svg';
+import Coinbase from '../../public/images/coinbase.svg';
+import Unstoppable from '../../public/images/unstoppable.svg';
+import CoreFeatures from '../../public/images/core-features.png';
+import PolygonRibbon from '../../public/images/polygon-ribbon.svg';
+import EthereumRibbon from '../../public/images/ethereum-ribbon.svg';
+import BinanceRibbon from '../../public/images/binance-ribbon.svg';
+import FilecoinRibbon from '../../public/images/filecoin-ribbon.svg';
+import IpfsRibbon from '../../public/images/ipfs-ribbon.svg';
+import Whale from '../../public/images/whale.png';
+import Toggle from '../../public/images/toggle.svg';
+import FirstBlock from '../../public/images/upload-to-earn.png';
+import SecondBlock from '../../public/images/own-your-data.png';
+import SecondBlockMobile from '../../public/images/own-your-data-mobile.png';
+import ThirdBlock from '../../public/images/share-trade-create.png';
+import ThirdBlockMobile from '../../public/images/share-trade-create-mobile.png';
+import AccessPopup from '../../public/images/share-trade-create-popup.png';
 
 import styles from './styles.module.scss';
 
@@ -52,7 +51,17 @@ export const MainPage = () => {
       <div className={styles.ownYourData}>
         <div className={styles.leftPart}>
           <div className={styles.popup}>
-            <img src={MagicWave.src} alt='' />
+            <video
+              width='100%'
+              controls={false}
+              autoPlay
+              playsInline
+              muted
+              loop
+            >
+              <source src='/video/magic-wave.mov' type='video/mp4' />
+              Sorry, your browser doesn't support videos.
+            </video>
             <div className={styles.informationBlock}>
               <h3>The Magic Wave art</h3>
               <p>Just one more step before it’s yours!</p>
@@ -117,7 +126,10 @@ export const MainPage = () => {
           FOR EACH YOU UPLOAD GET REWARDS
         </div>
         <div className={styles.content}>
-          <img src={CoreFeatures.src} alt='' />
+          <video width='80%' controls={false} autoPlay playsInline muted loop>
+            <source src='/video/core-features.mov' type='video/mp4' />
+            Sorry, your browser doesn't support videos.
+          </video>
           <div className={styles.rightPart}>
             <h2>THE CORE FEATURES</h2>
             <ul>

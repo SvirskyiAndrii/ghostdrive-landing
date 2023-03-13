@@ -1,10 +1,10 @@
 import { Button } from '../Button';
 
-import FirstBlock from '../../assets/images/products-first.png';
-import SecondBlock from '../../assets/images/products-second.png';
-import ThirdBlock from '../../assets/images/products-third.png';
-import SecondBlockMobile from '../../assets/images/products-second-mobile.png';
-import ThirdBlockMobile from '../../assets/images/products-third-mobile.png';
+import FirstBlock from '../../public/images/products-first.png';
+import SecondBlock from '../../public/images/products-second.png';
+import ThirdBlock from '../../public/images/products-third.png';
+import SecondBlockMobile from '../../public/images/products-second-mobile.png';
+import ThirdBlockMobile from '../../public/images/products-third-mobile.png';
 
 import styles from './styles.module.scss';
 

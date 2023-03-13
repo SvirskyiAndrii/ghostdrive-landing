@@ -1,10 +1,10 @@
 import styles from './styles.module.scss';
 
-import Github from '../../assets/images/github.svg';
-import Telegram from '../../assets/images/telegram.svg';
-import Medium from '../../assets/images/medium.svg';
-import Twitter from '../../assets/images/twitter.svg';
-import Facebook from '../../assets/images/facebook.svg';
+import Github from '../../public/images/github.svg';
+import Telegram from '../../public/images/telegram.svg';
+import Medium from '../../public/images/medium.svg';
+import Twitter from '../../public/images/twitter.svg';
+import Facebook from '../../public/images/facebook.svg';
 
 export default function Footer() {
   return (
