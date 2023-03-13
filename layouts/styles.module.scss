@@ -2,6 +2,28 @@
   background-color: #ffffff;
 }
 
+/* ibm-plex-mono-300 - latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/ibm-plex-mono-v12-latin-300.eot');
+  /* IE9 Compat Modes */
+  src: local(''),
+    url('../assets/fonts/ibm-plex-mono-v12-latin-300.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../assets/fonts/ibm-plex-mono-v12-latin-300.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('../assets/fonts/ibm-plex-mono-v12-latin-300.woff') format('woff'),
+    /* Modern Browsers */ url('../assets/fonts/ibm-plex-mono-v12-latin-300.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('../assets/fonts/ibm-plex-mono-v12-latin-300.svg#IBMPlexMono')
+      format('svg');
+  /* Legacy iOS */
+}
+
 /* ibm-plex-mono-regular - latin */
 @font-face {
   font-family: 'IBM Plex Mono';

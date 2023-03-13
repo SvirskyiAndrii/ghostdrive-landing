@@ -19,7 +19,7 @@
     // border: 0.1px solid #ffffff;
     backdrop-filter: blur(12px);
     padding: 64px 64px 43px;
-    span {
+    .close {
       position: absolute;
       top: 25px;
       right: 17px;
@@ -30,6 +30,21 @@
       background-repeat: no-repeat;
       cursor: pointer;
       user-select: none;
+    }
+  }
+}
+
+@media all and (max-width: 560px) {
+  .container {
+    .modal {
+      padding: 24px;
+      .close {
+        top: 15px;
+        right: 15px;
+        width: 12.43px;
+        height: 13.38px;
+        background-size: contain;
+      }
     }
   }
 }

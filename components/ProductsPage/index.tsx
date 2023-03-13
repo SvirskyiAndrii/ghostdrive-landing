@@ -25,7 +25,7 @@ export const ProductsPage = () => {
             text='TRY IT UP'
             width={{
               desktop: 139,
-              mobile: 100,
+              mobile: 83,
             }}
             onClick={() => {
               window.open('https://ghostdrive.io/nft');
@@ -59,7 +59,7 @@ export const ProductsPage = () => {
             text='TRY IT UP'
             width={{
               desktop: 139,
-              mobile: 100,
+              mobile: 83,
             }}
             onClick={() => {
               window.open('https://ghostdrive.io/nft');

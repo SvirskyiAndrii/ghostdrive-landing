@@ -17,9 +17,7 @@
       cursor: pointer;
       user-select: none;
       position: relative;
-
       font-size: 0.97222222222vw;
-      line-height: 150%;
       &::after {
         content: '*';
         position: absolute;
@@ -47,6 +45,78 @@
       &::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+      }
+    }
+    .numberInput {
+      display: flex;
+      width: calc(26.3888888889vw - 3.33333333333vw);
+      input {
+        width: calc(26.3888888889vw - 3.33333333333vw - 5.69444444444vw);
+      }
+      .select {
+        position: relative;
+        width: 5.625vw;
+        height: 53px;
+        background: #292929;
+        font-size: 0.97222222222vw;
+        line-height: 53px;
+        color: #ffffff;
+        text-align: left;
+        .current {
+          position: relative;
+          border-right: 1px solid #ffffff46;
+          width: 5.625vw;
+          height: 53px;
+          padding: 0 2.77777777778vw 0 1.66666666667vw;
+          cursor: pointer;
+          user-select: none;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            transform: translate(0, -50%);
+            width: 1.66666666667vw;
+            height: 24px;
+            background-image: url('../../assets/images/number-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.opened {
+            &::after {
+              transform: translate(0, -50%) rotate(180deg);
+            }
+          }
+        }
+        .codes {
+          height: 150px;
+          overflow-y: scroll;
+          position: absolute;
+          z-index: 3;
+          top: 53px;
+          left: 0;
+          &::-webkit-scrollbar {
+            width: 1px;
+          }
+          &::-webkit-scrollbar-thumb {
+            width: 1px;
+            background-color: rgba(169, 169, 169, 0.493);
+          }
+          .code {
+            width: 5.55555555556vw;
+            height: 50px;
+            padding: 0 2.70833333333vw 0 1.66666666667vw;
+            cursor: pointer;
+            user-select: none;
+            background: #292929;
+            &:not(:last-child) {
+              border-bottom: 1px solid #ffffff46;
+            }
+            &:hover {
+              background: #444444;
+            }
+          }
+        }
       }
     }
   }
@@ -167,7 +237,6 @@
       font-size: 7.25vw;
     }
     .inputContainer {
-      gap: 7.5vw;
       label {
         font-size: 2.97222222222vw;
         &::after {
@@ -176,9 +245,39 @@
         }
       }
       input {
-        width: calc(36.3888888889vw - 3.33333333333vw);
+        width: calc(45vw - 3.33333333333vw);
         height: 25px;
         font-size: 1.97222222222vw;
+      }
+      .numberInput {
+        width: calc(45vw - 3.33333333333vw);
+        .select {
+          line-height: 25px;
+          height: 25px;
+
+          .current {
+            height: 25px;
+            font-size: 1.97222222222vw;
+            padding-left: 1vw;
+            &::after {
+              right: 0px;
+              width: 8px;
+              height: 8px;
+              background-size: contain;
+            }
+          }
+          .codes {
+            height: 100px;
+            top: 25px;
+            .code {
+              width: calc(5.55555555556vw - 1px);
+              height: 25px;
+            }
+          }
+        }
+        input {
+          width: calc(45vw - 3.33333333333vw - 5.69444444444vw);
+        }
       }
     }
     .buttons {
