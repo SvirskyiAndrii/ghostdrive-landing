@@ -71,9 +71,7 @@ export const FeaturesPage = () => {
             <td className={styles.name}></td>
             <td className={styles.content}>
               <Button
-                onClick={() => {
-                  handleCheckout();
-                }}
+                onClick={() => {}}
                 text={'sign up'}
                 width={{
                   desktop: 123,
@@ -99,7 +97,9 @@ export const FeaturesPage = () => {
             </td>
             <td className={styles.content}>
               <Button
-                onClick={() => {}}
+                onClick={() => {
+                  handleCheckout();
+                }}
                 text={'bUY'}
                 width={{
                   desktop: 123,
