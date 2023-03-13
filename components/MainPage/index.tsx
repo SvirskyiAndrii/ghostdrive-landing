@@ -8,7 +8,6 @@ import Diamond from '../../public/images/diamond.svg';
 import Metamask from '../../public/images/metamask.svg';
 import Coinbase from '../../public/images/coinbase.svg';
 import Unstoppable from '../../public/images/unstoppable.svg';
-import CoreFeatures from '../../public/images/core-features.png';
 import PolygonRibbon from '../../public/images/polygon-ribbon.svg';
 import EthereumRibbon from '../../public/images/ethereum-ribbon.svg';
 import BinanceRibbon from '../../public/images/binance-ribbon.svg';
@@ -60,7 +59,7 @@ export const MainPage = () => {
               loop
             >
               <source src='/video/magic-wave.mov' type='video/mp4' />
-              Sorry, your browser doesn't support videos.
+              Sorry, your browser doesn’t support videos.
             </video>
             <div className={styles.informationBlock}>
               <h3>The Magic Wave art</h3>
@@ -128,7 +127,7 @@ export const MainPage = () => {
         <div className={styles.content}>
           <video width='80%' controls={false} autoPlay playsInline muted loop>
             <source src='/video/core-features.mov' type='video/mp4' />
-            Sorry, your browser doesn't support videos.
+            Sorry, your browser doesn’t support videos.
           </video>
           <div className={styles.rightPart}>
             <h2>THE CORE FEATURES</h2>
