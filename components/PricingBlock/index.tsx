@@ -66,7 +66,7 @@ export const PricingBlock = () => {
               Solo <span>FREE</span>
             </div>
             <div className={styles.item}>
-              Team <span>$9.99/mo</span>
+              Team <span>{data.price}</span>
             </div>
             <div className={styles.item}>
               Unlimited <span>CUSTOM</span>

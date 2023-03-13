@@ -3,6 +3,8 @@ import { Button } from '../Button';
 import FirstBlock from '../../assets/images/products-first.png';
 import SecondBlock from '../../assets/images/products-second.png';
 import ThirdBlock from '../../assets/images/products-third.png';
+import SecondBlockMobile from '../../assets/images/products-second-mobile.png';
+import ThirdBlockMobile from '../../assets/images/products-third-mobile.png';
 
 import styles from './styles.module.scss';
 
@@ -35,7 +37,8 @@ export const ProductsPage = () => {
         <img src={FirstBlock.src} alt='Ipad' />
       </div>
       <div className={styles.ghostVault}>
-        <img src={SecondBlock.src} alt='Ipad' />
+        <img src={SecondBlock.src} alt='Ipad' className={styles.desktop} />
+        <img src={SecondBlockMobile.src} alt='Ipad' className={styles.mobile} />
         <div className={styles.content}>
           <h2 className={styles.firstTitle}>
             GHOST<span>VAULT</span>
@@ -66,7 +69,8 @@ export const ProductsPage = () => {
             }}
           />
         </div>
-        <img src={ThirdBlock.src} alt='Ipad' />
+        <img src={ThirdBlock.src} alt='Ipad' className={styles.desktop} />
+        <img src={ThirdBlockMobile.src} alt='Ipad' className={styles.mobile} />
       </div>
     </div>
   );
