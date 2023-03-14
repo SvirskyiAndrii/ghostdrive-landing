@@ -1,21 +1,31 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import getStripe from 'lib/getStripe';
 
+import Portal from 'components/HOC/Portal';
 import { Button } from 'components/Button';
 import { ContactUs } from 'components/ContactUs';
-import Portal from 'components/HOC/Portal';
 import { Modal } from 'components/Modal';
+import { SuccessPopup } from 'components/SuccessPopup';
 import { tableData } from './mock';
 
 import styles from './styles.module.scss';
 
 export const FeaturesPage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   let referral: any;
 
   if (typeof window !== 'undefined') {
     referral = new URLSearchParams(window.location.search).get('referral');
   }
+
+  useEffect(() => {
+    if (isSuccess) {
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 1500);
+    }
+  }, [isSuccess]);
 
   async function handleCheckout() {
     const stripe: any = await getStripe();
@@ -138,8 +148,14 @@ export const FeaturesPage = () => {
                 document.getElementsByTagName('body')[0].style.overflow =
                   'auto';
               }}
+              setIsSuccess={setIsSuccess}
             />
           </Modal>
+        </Portal>
+      )}
+      {isSuccess && (
+        <Portal>
+          <SuccessPopup />
         </Portal>
       )}
     </>

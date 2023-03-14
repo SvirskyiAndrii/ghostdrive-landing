@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Portal from 'components/HOC/Portal';
 import { Button } from 'components/Button';
 import { Modal } from 'components/Modal';
 import { ContactUs } from 'components/ContactUs';
+import { SuccessPopup } from 'components/SuccessPopup';
 import { subscriptions } from './subscriptions';
 import getStripe from 'lib/getStripe';
 
@@ -12,11 +13,21 @@ import styles from './styles.module.scss';
 export const PricingBlock = () => {
   const [data, setData] = useState(subscriptions.annually);
   const [openModal, setOpenModal] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
   let referral: any;
 
   if (typeof window !== 'undefined') {
     referral = new URLSearchParams(window.location.search).get('referral');
   }
+
+  useEffect(() => {
+    if (isSuccess) {
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 1500);
+    }
+  }, [isSuccess]);
 
   async function handleCheckout() {
     const stripe: any = await getStripe();
@@ -202,8 +213,14 @@ export const PricingBlock = () => {
                 document.getElementsByTagName('body')[0].style.overflow =
                   'auto';
               }}
+              setIsSuccess={setIsSuccess}
             />
           </Modal>
+        </Portal>
+      )}
+      {isSuccess && (
+        <Portal>
+          <SuccessPopup />
         </Portal>
       )}
     </>

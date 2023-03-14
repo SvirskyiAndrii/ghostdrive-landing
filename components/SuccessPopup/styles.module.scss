@@ -1,0 +1,41 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(2px);
+  color: #202124;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow-y: auto;
+  z-index: 2;
+  .modal {
+    position: relative;
+    background: #ffffff;
+    backdrop-filter: blur(12px);
+    padding: 59px 105px;
+    font-family: 'IBM Plex Mono';
+    text-align: center;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    h3 {
+      margin: 0 0 8px 0;
+      font-weight: 700;
+      font-size: 24px;
+      color: #10161a;
+    }
+    p {
+      width: 24.6527777778vw;
+      margin: 0;
+      font-size: 14px;
+      color: #7e8a9f;
+    }
+  }
+}

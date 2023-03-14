@@ -74,7 +74,13 @@
       width: calc(26.3888888889vw - 3.29vw);
       &.notValid {
         border: 1px solid #ed1d2d;
-        color: #ed1d2d;
+        div {
+          background: rgba(255, 167, 174, 0.2);
+        }
+        input {
+          background: rgba(255, 167, 174, 0.2);
+          color: #ed1d2d;
+        }
       }
       input {
         width: calc(26.3888888889vw - 3.33333333333vw - 5.69444444444vw);
@@ -121,18 +127,9 @@
       height: 34px;
       position: relative;
       right: 6px;
-      background: #202124;
+      background: transparent;
       cursor: pointer;
       user-select: none;
-      &:hover {
-        .cool_button {
-          background-color: #ffffff;
-          border: 1px solid #2021245e;
-          button {
-            color: #202124;
-          }
-        }
-      }
 
       &::before {
         content: '';
@@ -161,13 +158,12 @@
         width: 10.3472222222vw;
         height: 34px;
         border: 1px solid transparent;
-        background: #202124;
         position: relative;
         .button {
           cursor: pointer;
           user-select: none;
           border: none;
-          background: none;
+          background: #202124;
           font-weight: 500;
           font-size: 0.83333333333vw;
           letter-spacing: 0.1em;
@@ -175,6 +171,14 @@
           width: 10.3472222222vw;
           height: 34px;
           color: white;
+          &:hover:not(:disabled) {
+            background: white;
+            color: #202124;
+          }
+          &:disabled {
+            background: #b9b9b9;
+            cursor: not-allowed;
+          }
         }
         &::before {
           content: '';
@@ -185,7 +189,7 @@
           background-size: cover;
           background-repeat: no-repeat;
           left: -6px;
-          bottom: -6px;
+          bottom: -9px;
           transform: rotate(180deg);
         }
         &::after {
@@ -197,7 +201,7 @@
           background-size: cover;
           background-repeat: no-repeat;
           right: -6px;
-          bottom: -6px;
+          bottom: -9px;
           transform: rotate(90deg);
         }
       }

@@ -1,53 +1,60 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
+import Portal from 'components/HOC/Portal';
 
 import 'react-phone-number-input/style.css';
 import styles from './styles.module.scss';
 
-export const ContactUs = ({ close }: { close: () => void }) => {
-  const [number, setNumber] = useState<any>();
-  const [errors, setErrors] = useState<any>(null);
+const EMAIL_REGEX = /(.+)@(.+){2,}\.(.+){2,}/;
+
+export const ContactUs = ({
+  close,
+  setIsSuccess,
+}: {
+  close: () => void;
+  setIsSuccess: any;
+}) => {
+  const [email, setEmail] = useState('');
+  const [number, setNumber] = useState<any>('');
+  const [name, setName] = useState('');
+  const [company, setCompany] = useState('');
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  const [errors, setErrors] = useState<any>({ number: null, email: null });
+
+  useEffect(() => {
+    if (email && number && name && company && !errors.email && !errors.number) {
+      setIsDisabled(false);
+    } else {
+      !isDisabled && setIsDisabled(true);
+    }
+  }, [email, number, name, company, errors]);
 
   const onFormSubmit = (event: any) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    const name = formData.get('name');
-    const email: any = formData.get('email');
-    const company = formData.get('company');
-    const collectedErrors: any = {};
-
-    if (email?.length > 20) {
-      collectedErrors.email = 'Incorrect email address';
-    }
-    if (number?.length > 20) {
-      collectedErrors.number = 'Incorrect phone number';
-    }
-
-    setErrors(collectedErrors);
-
-    if (!collectedErrors.email && !collectedErrors.number) {
-      console.log({ name, email, number, company });
-      event.target.reset();
-      close();
-    }
-  };
-
-  const clearInputs = () => {
-    if (errors) {
-      setErrors(null);
-    }
+    // send to backend
+    setEmail('');
+    setNumber('');
+    setName('');
+    setCompany('');
+    close();
+    setIsSuccess(true);
   };
 
   return (
-    <form className={styles.form} onSubmit={onFormSubmit}>
+    <form className={styles.form} onSubmit={onFormSubmit} autoComplete='off'>
       <h2 className={styles.title}>Contact Us</h2>
       <div className={styles.inputContainer}>
         <label htmlFor='name'>Name</label>
         <input
           name='name'
           type='text'
+          value={name}
           placeholder='Enter your name'
-          onFocus={clearInputs}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+          maxLength={64}
           required
         />
       </div>
@@ -59,7 +66,22 @@ export const ContactUs = ({ close }: { close: () => void }) => {
             name='email'
             type='email'
             placeholder='Enter your email address'
-            onFocus={clearInputs}
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (e.target.value.match(EMAIL_REGEX) || e.target.value === '') {
+                errors?.email &&
+                  setErrors({
+                    number: errors?.number,
+                    email: null,
+                  });
+              } else {
+                setErrors({
+                  number: errors?.number,
+                  email: 'Incorrect email address',
+                });
+              }
+            }}
             required
           />
           {errors?.email && (
@@ -71,18 +93,17 @@ export const ContactUs = ({ close }: { close: () => void }) => {
         <label htmlFor='number'>Phone Number</label>
         <div
           className={`${styles.numberInput} ${
-            errors?.email ? styles.notValid : ''
+            errors?.number ? styles.notValid : ''
           }`}
         >
           <PhoneInput
-            className={errors?.email ? styles.notValid : ''}
             placeholder='Enter phone number'
             value={number}
             name='number'
+            maxLength={64}
             onChange={(e: any) => {
               setNumber(e);
             }}
-            onFocus={clearInputs}
           />
           {errors?.number && (
             <span className={styles.error}>{errors.number}</span>
@@ -94,8 +115,12 @@ export const ContactUs = ({ close }: { close: () => void }) => {
         <input
           name='company'
           type='text'
+          value={company}
+          onChange={(e) => {
+            setCompany(e.target.value);
+          }}
           placeholder='Enter your company name'
-          onFocus={clearInputs}
+          maxLength={64}
           required
         />
       </div>
@@ -105,7 +130,11 @@ export const ContactUs = ({ close }: { close: () => void }) => {
         </button>
         <div className={styles.wrapper}>
           <div className={styles.cool_button}>
-            <button type='submit' className={styles.button}>
+            <button
+              type='submit'
+              className={styles.button}
+              disabled={isDisabled}
+            >
               SUBMIT
             </button>
           </div>
