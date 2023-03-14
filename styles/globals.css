@@ -31,3 +31,23 @@ a {
 body {
   position: relative;
 }
+
+.PhoneInputCountry {
+  width: 5.625vw;
+  height: 53px;
+  background: #292929;
+  margin: 0 !important;
+  border-right: 1px solid #ffffff20;
+  padding: 0 0 0 2vw;
+}
+
+@media all and (max-width: 560px) {
+  .PhoneInputCountry {
+    height: 25px;
+    padding: 0 0 0 4px;
+    width: 8.625vw;
+  }
+  .PhoneInputCountrySelectArrow {
+    display: none !important;
+  }
+}

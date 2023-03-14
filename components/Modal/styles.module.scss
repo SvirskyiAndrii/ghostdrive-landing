@@ -13,10 +13,10 @@
   justify-content: center;
   text-align: center;
   overflow-y: auto;
+  z-index: 2;
   .modal {
     position: relative;
     background: #202124;
-    // border: 0.1px solid #ffffff;
     backdrop-filter: blur(12px);
     padding: 64px 64px 43px;
     .close {
