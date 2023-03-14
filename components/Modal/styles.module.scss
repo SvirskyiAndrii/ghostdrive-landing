@@ -7,7 +7,7 @@
   background: rgba(0, 0, 0, 0.75);
   mix-blend-mode: normal;
   backdrop-filter: blur(2px);
-  color: #ffffff;
+  color: #202124;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@
   z-index: 2;
   .modal {
     position: relative;
-    background: #202124;
+    background: #ffffff;
     backdrop-filter: blur(12px);
     padding: 64px 64px 43px;
     .close {

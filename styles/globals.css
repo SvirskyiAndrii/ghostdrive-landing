@@ -35,10 +35,11 @@ body {
 .PhoneInputCountry {
   width: 5.625vw;
   height: 53px;
-  background: #292929;
+  background: #fafafa;
   margin: 0 !important;
-  border-right: 1px solid #ffffff20;
   padding: 0 0 0 2vw;
+  border: 1px solid transparent;
+  border-right: 1px solid #e8e9ed;
 }
 
 @media all and (max-width: 560px) {

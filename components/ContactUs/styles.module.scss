@@ -30,14 +30,17 @@
     input {
       width: calc(26.3888888889vw - 3.33333333333vw);
       height: 53px;
-      background: #292929;
+      background: #fafafa;
       backdrop-filter: blur(2px);
       outline: none;
       border: 1px solid transparent;
       padding: 0 1.66666666667vw;
-      color: #ffffff;
+      color: #202124;
       font-family: 'IBM Plex Mono';
       font-size: 0.97222222222vw;
+
+      border: 1px solid transparent;
+
       &::placeholder {
         color: #afafaf;
       }
@@ -46,12 +49,47 @@
         -webkit-appearance: none;
         margin: 0;
       }
+
+      &.notValid {
+        background: rgba(255, 167, 174, 0.2);
+        border: 1px solid #ed1d2d;
+        color: #ed1d2d;
+      }
+    }
+    .errors {
+      position: relative;
+      .error {
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 0.55555555555vw;
+        color: #ed1d2d;
+        width: 100%;
+      }
     }
     .numberInput {
       display: flex;
-      width: calc(26.3888888889vw - 3.33333333333vw);
+      width: calc(26.3888888889vw - 3.29vw);
+      &.notValid {
+        border: 1px solid #ed1d2d;
+        color: #ed1d2d;
+      }
       input {
         width: calc(26.3888888889vw - 3.33333333333vw - 5.69444444444vw);
+        border-left: none;
+      }
+      position: relative;
+      .error {
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 0.55555555555vw;
+        color: #ed1d2d;
+        width: 100%;
       }
     }
   }
@@ -68,7 +106,7 @@
       text-align: center;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #ffffff;
+      color: #202124;
       background: none;
       border: none;
       cursor: pointer;
@@ -79,18 +117,20 @@
       }
     }
     .wrapper {
-      width: 100px;
+      width: 10.3472222222vw;
       height: 34px;
       position: relative;
       right: 6px;
-      background: #ffffff;
+      background: #202124;
       cursor: pointer;
       user-select: none;
       &:hover {
         .cool_button {
-          color: #202124;
           background-color: #ffffff;
           border: 1px solid #2021245e;
+          button {
+            color: #202124;
+          }
         }
       }
 
@@ -99,7 +139,7 @@
         position: absolute;
         width: 10px;
         height: 10px;
-        background-image: url('../../public/images/left-top-corner-white.svg');
+        background-image: url('../../public/images/left-top-corner.svg');
         background-size: cover;
         background-repeat: no-repeat;
         left: -6.5px;
@@ -110,7 +150,7 @@
         position: absolute;
         width: 10px;
         height: 10px;
-        background-image: url('../../public/images/right-top-corner-white.svg');
+        background-image: url('../../public/images/right-top-corner.svg');
         background-size: cover;
         background-repeat: no-repeat;
         right: -6px;
@@ -118,10 +158,10 @@
       }
       .cool_button {
         transition: all 0.1s ease-in-out;
-        width: 100px;
+        width: 10.3472222222vw;
         height: 34px;
         border: 1px solid transparent;
-        background: #ffffff;
+        background: #202124;
         position: relative;
         .button {
           cursor: pointer;
@@ -132,16 +172,16 @@
           font-size: 0.83333333333vw;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          width: 100px;
+          width: 10.3472222222vw;
           height: 34px;
-          color: black;
+          color: white;
         }
         &::before {
           content: '';
           position: absolute;
           width: 10px;
           height: 10px;
-          background-image: url('../../public/images/right-top-corner-white.svg');
+          background-image: url('../../public/images/right-top-corner.svg');
           background-size: cover;
           background-repeat: no-repeat;
           left: -6px;
@@ -153,7 +193,7 @@
           position: absolute;
           width: 10px;
           height: 10px;
-          background-image: url('../../public/images/right-top-corner-white.svg');
+          background-image: url('../../public/images/right-top-corner.svg');
           background-size: cover;
           background-repeat: no-repeat;
           right: -6px;
