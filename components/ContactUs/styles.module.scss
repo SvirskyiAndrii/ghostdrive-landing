@@ -84,7 +84,6 @@
       position: relative;
       right: 6px;
       background: #ffffff;
-      color: #ffffff;
       cursor: pointer;
       user-select: none;
       &:hover {
@@ -124,7 +123,6 @@
         border: 1px solid transparent;
         background: #ffffff;
         position: relative;
-        color: white;
         .button {
           cursor: pointer;
           user-select: none;
@@ -136,6 +134,7 @@
           text-transform: uppercase;
           width: 100px;
           height: 34px;
+          color: black;
         }
         &::before {
           content: '';
