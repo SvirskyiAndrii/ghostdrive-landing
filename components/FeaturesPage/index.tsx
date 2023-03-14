@@ -69,7 +69,7 @@ export const FeaturesPage = () => {
           })}
           <tr>
             <td className={styles.name}></td>
-            <td className={styles.content}>
+            <td className={`${styles.content} ${styles.button}`}>
               <Button
                 onClick={() => {}}
                 text={'sign up'}
@@ -79,7 +79,7 @@ export const FeaturesPage = () => {
                 }}
               />
             </td>
-            <td className={styles.content}>
+            <td className={`${styles.content} ${styles.button}`}>
               <Button
                 onClick={() => {
                   window.open(
@@ -95,7 +95,7 @@ export const FeaturesPage = () => {
                 }}
               />
             </td>
-            <td className={styles.content}>
+            <td className={`${styles.content} ${styles.button}`}>
               <Button
                 onClick={() => {
                   handleCheckout();
@@ -107,7 +107,7 @@ export const FeaturesPage = () => {
                 }}
               />
             </td>
-            <td className={styles.content}>
+            <td className={`${styles.content} ${styles.button}`}>
               <Button
                 onClick={() => {
                   setIsOpen(true);
