@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import getStripe from '../../lib/getStripe';
+import getStripe from 'lib/getStripe';
 
-import { Button } from '../Button';
-import { ContactUs } from '../ContactUs';
-import Portal from '../HOC/Portal';
-import { Modal } from '../Modal';
+import { Button } from 'components/Button';
+import { ContactUs } from 'components/ContactUs';
+import Portal from 'components/HOC/Portal';
+import { Modal } from 'components/Modal';
 import { tableData } from './mock';
 
 import styles from './styles.module.scss';

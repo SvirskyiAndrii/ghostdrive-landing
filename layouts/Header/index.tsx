@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import router from 'next/router';
-import { Button } from '../../components/Button';
-import Logo from '../../public/images/header-logo.svg';
+import { Button } from 'components/Button';
+import Logo from '/public/images/header-logo.svg';
 
 import styles from './styles.module.scss';
 

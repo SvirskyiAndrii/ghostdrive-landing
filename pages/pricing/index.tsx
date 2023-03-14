@@ -1,4 +1,4 @@
-import { PricingBlock } from '../../components/PricingBlock';
+import { PricingBlock } from 'components/PricingBlock';
 
 import styles from './styles.module.scss';
 

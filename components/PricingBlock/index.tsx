@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import Portal from '../HOC/Portal';
-import { Button } from '../Button';
-import { Modal } from '../Modal';
-import { ContactUs } from '../ContactUs';
+import Portal from 'components/HOC/Portal';
+import { Button } from 'components/Button';
+import { Modal } from 'components/Modal';
+import { ContactUs } from 'components/ContactUs';
 import { subscriptions } from './subscriptions';
-import getStripe from '../../lib/getStripe';
+import getStripe from 'lib/getStripe';
 
 import styles from './styles.module.scss';
 
